@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=3 uid="uid://cudd37wsjyxm1"]
+
+[ext_resource type="PackedScene" uid="uid://c068ld5fbppta" path="res://levels_binary_code/binary_game.tscn" id="1_jiq7u"]
+[ext_resource type="PackedScene" uid="uid://ejx0s5yblql5" path="res://Scenes/crash_scene3.tscn" id="2_q3tw1"]
+[ext_resource type="PackedScene" uid="uid://dmlokuakpv01" path="res://levels_table/table_level_2/antenna_reference.tscn" id="3_uuq06"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_yyic3"]
+font_size = 30
+
+[node name="BinaryGame" instance=ExtResource("1_jiq7u")]
+show_number_labels = false
+show_current_sum = false
+bottom_target_number = 80
+top_target_number = 127
+next_level_scene = ExtResource("2_q3tw1")
+intro_title = "Připoj anténu do lodi"
+intro_desc = "Je čas anténu připojit. Stejně jako u trysky, musíš do systému načíst její kód. Pozor - tentokrát P.3.P.4. zapomněl, kde se ukazuje celková hodnota zmáčklých tlačítek. Na hodnoty jednotlivých tlačítek si také nevzpomněl."
+lose_text = "Tvůj tlačítkový kód se nerovná tomu správnému.
+Nápověda: 1 2 4 8 ..."
+
+[node name="Label55" parent="." index="8"]
+text = "Instalace antény do systému"
+
+[node name="TargetLabel" parent="CenterContainer/VBoxContainer" index="0"]
+label_settings = SubResource("LabelSettings_yyic3")
+
+[node name="JetReference" parent="." index="13"]
+visible = false
+
+[node name="Control" parent="." index="14" instance=ExtResource("3_uuq06")]
+layout_mode = 1
+offset_left = 876.0
+offset_top = 31.0
+offset_right = 875.552
+offset_bottom = 23.0
+scale = Vector2(0.95, 0.95)
+
+[node name="Label" parent="." index="15"]
+text = "Součástka: anténa"

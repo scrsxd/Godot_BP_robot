@@ -1,0 +1,45 @@
+[gd_scene load_steps=5 format=3 uid="uid://ltdtmv8gsg26"]
+
+[ext_resource type="PackedScene" uid="uid://c068ld5fbppta" path="res://levels_binary_code/binary_game.tscn" id="1_q7a0y"]
+[ext_resource type="PackedScene" uid="uid://ty71gswccup0" path="res://Scenes/crash_scene4.tscn" id="2_7iion"]
+[ext_resource type="PackedScene" uid="uid://b4wsdoxjcdd0w" path="res://levels_table/table_level_3/engine_reference.tscn" id="2_ggny0"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_npd1n"]
+font_size = 30
+
+[node name="BinaryGame" instance=ExtResource("1_q7a0y")]
+show_number_labels = false
+show_current_sum = false
+turn_limit = 2
+bottom_target_number = 100
+top_target_number = 199
+randomize_on_loss = true
+next_level_scene = ExtResource("2_7iion")
+intro_title = "Připoj motor do lodi"
+intro_desc = "Poslední kód pro poslední součástku. Načíst motor do systému. Pozor - P.3.P.4. má velmi krátkou paměť, a proto po pár pokusech zapomene kód. Pokud se to stane, robot si musí vymyslet nový kód."
+lose_title = "Robot zapomněl kód"
+lose_text = "P.3.P.4. zapomněl, který kód byl ten správný a proto si musí vymyslet nový kód. 
+Nápověda: 1, 2, 4, 8, ..."
+lose_button_text = "Nový kód"
+
+[node name="Label55" parent="." index="8"]
+text = "Instalace motoru do systému"
+
+[node name="TargetLabel" parent="CenterContainer/VBoxContainer" index="0"]
+label_settings = SubResource("LabelSettings_npd1n")
+
+[node name="JetReference" parent="." index="13"]
+visible = false
+
+[node name="EngineReference" parent="." index="14" instance=ExtResource("2_ggny0")]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.972
+anchor_bottom = 0.337
+offset_left = 866.0
+offset_top = 27.0
+offset_right = -47.744
+offset_bottom = -4.68001
+
+[node name="Label" parent="." index="15"]
+text = "Součástka: motor"

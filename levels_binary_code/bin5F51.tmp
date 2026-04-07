@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://2c5g4peawp5l"]
+
+[ext_resource type="PackedScene" uid="uid://c068ld5fbppta" path="res://levels_binary_code/binary_game.tscn" id="1_71xg8"]
+[ext_resource type="PackedScene" uid="uid://cwtdc1858ho34" path="res://Scenes/crash_scene2.tscn" id="2_dx43c"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_wg2pt"]
+font_size = 30
+
+[node name="BinaryGame" instance=ExtResource("1_71xg8")]
+show_number_labels = false
+bottom_target_number = 50
+top_target_number = 150
+next_level_scene = ExtResource("2_dx43c")
+intro_title = "Připoj trysku do lodi"
+intro_desc = "Načti ji do systému sestavením správného kódu. Pozor - robot zapomněl, která tlačítka znamenají které číslo."
+
+[node name="Label55" parent="." index="8"]
+text = "Instalace trysky do systému"
+
+[node name="TargetLabel" parent="CenterContainer/VBoxContainer" index="0"]
+label_settings = SubResource("LabelSettings_wg2pt")

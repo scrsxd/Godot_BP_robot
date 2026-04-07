@@ -1,0 +1,95 @@
+[gd_scene load_steps=5 format=3 uid="uid://dtbm8nrpgmvee"]
+
+[ext_resource type="Texture2D" uid="uid://bx6kgnpy443ug" path="res://Shapes/Kuzel.png" id="1_arit8"]
+[ext_resource type="Texture2D" uid="uid://chm2gcsvvrc6y" path="res://Shapes/Rectangle_Vert.png" id="2_hjxsx"]
+[ext_resource type="Texture2D" uid="uid://cjivcxsnpcmi1" path="res://Shapes/Rectangle_Thin.png" id="3_6pexf"]
+[ext_resource type="Texture2D" uid="uid://cvcl8o6yphooo" path="res://Shapes/Circle.png" id="4_biw8v"]
+
+[node name="Control" type="Control"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1052.0
+offset_bottom = -540.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(50, 50)
+
+[node name="Rotator" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 100.0
+offset_bottom = 100.0
+pivot_offset = Vector2(50, 50)
+
+[node name="Kuzel" type="TextureRect" parent="Rotator"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -41.3282
+offset_top = 30.0
+offset_right = 30.6718
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_arit8")
+expand_mode = 1
+
+[node name="RectangleVert" type="TextureRect" parent="Rotator"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -17.0
+offset_top = -26.0
+offset_right = -1.0
+offset_bottom = 38.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_hjxsx")
+expand_mode = 1
+
+[node name="RectangleThin" type="TextureRect" parent="Rotator"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -17.0
+offset_top = -2.0
+offset_right = 23.0
+offset_bottom = 22.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -2.35619
+texture = ExtResource("3_6pexf")
+expand_mode = 1
+
+[node name="HalfCircle" type="TextureRect" parent="Rotator"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -42.0
+offset_top = -42.0
+offset_right = -31.0
+offset_bottom = -31.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -0.137881
+texture = ExtResource("4_biw8v")
+expand_mode = 1

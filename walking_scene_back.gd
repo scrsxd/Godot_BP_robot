@@ -1,0 +1,56 @@
+extends Control
+
+@export_category("Pohupování součástky")
+@export var bob_speed: float = 10.0 
+@export var bob_height: float = 4.0 
+@export var scroll_speed: float = 100.0
+@export var next_scene: PackedScene
+
+@onready var parallax_bg = $ParallaxBackground
+@onready var fade_rect = $ColorRect 
+@onready var story_label = $Label
+@onready var part = %Robot/Part 
+
+var time_passed: float = 0.0
+var part_start_y: float
+
+func _ready():
+	if "flip_h" in %Robot:
+		%Robot.flip_h = true
+
+	part_start_y = part.position.y
+
+	var tween_robot = create_tween()
+	tween_robot.tween_property(%Robot, "position", Vector2(150, 664), 20.0)
+	
+	var tween_rect = create_tween()
+	tween_rect.tween_property(fade_rect, "modulate:a", 0.0, 3.0)
+	
+	story_label.visible_ratio = 0.0
+	start_typewriter()
+	
+	await get_tree().create_timer(5.0).timeout
+	go_to_next_scene()
+
+func start_typewriter():
+	var tween = create_tween()
+	var time_to_type = story_label.text.length() * 0.05 
+	tween.tween_property(story_label, "visible_ratio", 1.0, time_to_type)
+
+func _process(delta):
+	parallax_bg.scroll_base_offset.x += scroll_speed * delta
+	
+	time_passed += delta
+	var offset_y = sin(time_passed * bob_speed) * bob_height
+	
+	part.position.y = part_start_y + offset_y
+
+func go_to_next_scene():
+	var tween = create_tween()
+	
+	tween.tween_property(fade_rect, "modulate:a", 1.0, 3.0)
+	tween.parallel().tween_property($Label, "modulate:a", 0.0, 3.0)
+	
+	await tween.finished
+	await get_tree().create_timer(0.35).timeout
+	get_tree().change_scene_to_packed(next_scene)

@@ -1,0 +1,608 @@
+[gd_scene load_steps=10 format=3 uid="uid://7cjx08v1jc0j"]
+
+[ext_resource type="PackedScene" uid="uid://c041iyty3muo1" path="res://levels_grid/grid_level.tscn" id="1_vkmpm"]
+[ext_resource type="Script" path="res://batteries.gd" id="2_4w4s0"]
+[ext_resource type="PackedScene" uid="uid://5jdny2uloy8k" path="res://levels_grid/exit_2.tscn" id="2_lgkxh"]
+[ext_resource type="Texture2D" uid="uid://byu171gpixmk" path="res://energy.png" id="3_we0hp"]
+[ext_resource type="Texture2D" uid="uid://c2g2hnigy6k17" path="res://screw.png" id="4_bxx4e"]
+[ext_resource type="PackedScene" uid="uid://cudd37wsjyxm1" path="res://levels_binary_code/binary_level_2.tscn" id="5_xb4e2"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_tnbhh"]
+viewport_path = NodePath(".")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d8mh5"]
+size = Vector2(64, 64)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y88yg"]
+size = Vector2(64, 64)
+
+[node name="Level" instance=ExtResource("1_vkmpm")]
+
+[node name="Background" parent="." index="2"]
+offset_right = 1152.0
+offset_bottom = 640.0
+
+[node name="Icon" parent="Exit" index="0"]
+scale = Vector2(0.32, 0.32)
+texture = SubResource("ViewportTexture_tnbhh")
+
+[node name="AntennaExit" parent="Exit" index="3" instance=ExtResource("2_lgkxh")]
+
+[node name="Water_BLOCK_TileMap" parent="." index="7"]
+layer_0/tile_data = PackedInt32Array(458752, 131073, 2, 458753, 196609, 2, 458754, 196609, 2, 458755, 196609, 2, 458756, 196609, 2, 458757, 262145, 2, 393221, 262145, 0, 393220, 196609, 0, 393219, 196609, 0, 393218, 196609, 0, 393217, 196609, 0, 393216, 131073, 0, 6, 131073, 0, 9, 262145, 0, 65545, 262145, 2, 65542, 131073, 2, 65543, 196609, 2, 65544, 196609, 2, 7, 196609, 0, 8, 196609, 0, 131086, 131073, 0, 131087, 262145, 0, 196622, 131073, 1, 262158, 131073, 1, 196623, 262145, 1, 262159, 262145, 1, 327694, 131073, 2, 327695, 262145, 2, 786438, 131073, 0, 851974, 131073, 1, 917510, 131073, 1, 983046, 131073, 1, 1048582, 131073, 1, 1114118, 131073, 2, 786439, 262145, 0, 851975, 262145, 1, 917511, 262145, 1, 983047, 262145, 1, 1048583, 262145, 1, 1114119, 262145, 2, 786442, 131073, 0, 851978, 131073, 2, 786443, 196609, 0, 851979, 196609, 2, 786444, 196609, 0, 851980, 196609, 2, 786445, 262145, 0, 851981, 262145, 2)
+
+[node name="Battery1_4" type="Area2D" parent="Battery2_0" index="2" groups=["energy"]]
+modulate = Color(1, 0.917647, 0, 1)
+position = Vector2(448, -512)
+script = ExtResource("2_4w4s0")
+metadata/energy = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="Battery2_0/Battery1_4" index="0"]
+scale = Vector2(0.125, 0.125)
+texture = ExtResource("3_we0hp")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Battery2_0/Battery1_4" index="1"]
+position = Vector2(32, 32)
+scale = Vector2(0.9, 0.9)
+shape = SubResource("RectangleShape2D_d8mh5")
+
+[node name="Battery1_5" type="Area2D" parent="Battery2_0" index="3" groups=["energy"]]
+modulate = Color(1, 0.917647, 0, 1)
+position = Vector2(256, -960)
+script = ExtResource("2_4w4s0")
+metadata/energy = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="Battery2_0/Battery1_5" index="0"]
+scale = Vector2(0.125, 0.125)
+texture = ExtResource("3_we0hp")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Battery2_0/Battery1_5" index="1"]
+position = Vector2(32, 32)
+scale = Vector2(0.9, 0.9)
+shape = SubResource("RectangleShape2D_d8mh5")
+
+[node name="Battery1_6" type="Area2D" parent="Battery2_0" index="4" groups=["energy"]]
+modulate = Color(1, 0.917647, 0, 1)
+position = Vector2(192, -896)
+script = ExtResource("2_4w4s0")
+metadata/energy = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="Battery2_0/Battery1_6" index="0"]
+scale = Vector2(0.125, 0.125)
+texture = ExtResource("3_we0hp")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Battery2_0/Battery1_6" index="1"]
+position = Vector2(32, 32)
+scale = Vector2(0.9, 0.9)
+shape = SubResource("RectangleShape2D_d8mh5")
+
+[node name="Battery1_7" type="Area2D" parent="Battery2_0" index="5" groups=["energy"]]
+modulate = Color(1, 0.917647, 0, 1)
+position = Vector2(576, -896)
+script = ExtResource("2_4w4s0")
+metadata/energy = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="Battery2_0/Battery1_7" index="0"]
+scale = Vector2(0.125, 0.125)
+texture = ExtResource("3_we0hp")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Battery2_0/Battery1_7" index="1"]
+position = Vector2(32, 32)
+scale = Vector2(0.9, 0.9)
+shape = SubResource("RectangleShape2D_d8mh5")
+
+[node name="Battery1_8" type="Area2D" parent="Battery2_0" index="6" groups=["energy"]]
+modulate = Color(1, 0.917647, 0, 1)
+position = Vector2(384, -704)
+script = ExtResource("2_4w4s0")
+metadata/energy = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="Battery2_0/Battery1_8" index="0"]
+scale = Vector2(0.125, 0.125)
+texture = ExtResource("3_we0hp")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Battery2_0/Battery1_8" index="1"]
+position = Vector2(32, 32)
+scale = Vector2(0.9, 0.9)
+shape = SubResource("RectangleShape2D_d8mh5")
+
+[node name="Battery1_9" type="Area2D" parent="Battery2_0" index="7" groups=["energy"]]
+modulate = Color(1, 0.917647, 0, 1)
+position = Vector2(512, -1024)
+script = ExtResource("2_4w4s0")
+metadata/energy = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="Battery2_0/Battery1_9" index="0"]
+scale = Vector2(0.125, 0.125)
+texture = ExtResource("3_we0hp")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Battery2_0/Battery1_9" index="1"]
+position = Vector2(32, 32)
+scale = Vector2(0.9, 0.9)
+shape = SubResource("RectangleShape2D_d8mh5")
+
+[node name="Battery1_1" type="Area2D" parent="Battery2_0" index="8" groups=["energy"]]
+modulate = Color(1, 0.917647, 0, 1)
+position = Vector2(768, -960)
+script = ExtResource("2_4w4s0")
+metadata/energy = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="Battery2_0/Battery1_1" index="0"]
+scale = Vector2(0.125, 0.125)
+texture = ExtResource("3_we0hp")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Battery2_0/Battery1_1" index="1"]
+position = Vector2(32, 32)
+scale = Vector2(0.9, 0.9)
+shape = SubResource("RectangleShape2D_d8mh5")
+
+[node name="Battery1_2" type="Area2D" parent="Battery2_0" index="9" groups=["energy"]]
+modulate = Color(1, 0.917647, 0, 1)
+position = Vector2(704, -768)
+script = ExtResource("2_4w4s0")
+metadata/energy = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="Battery2_0/Battery1_2" index="0"]
+scale = Vector2(0.125, 0.125)
+texture = ExtResource("3_we0hp")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Battery2_0/Battery1_2" index="1"]
+position = Vector2(32, 32)
+scale = Vector2(0.9, 0.9)
+shape = SubResource("RectangleShape2D_d8mh5")
+
+[node name="Battery1_3" type="Area2D" parent="Battery2_0" index="10" groups=["energy"]]
+modulate = Color(1, 0.917647, 0, 1)
+position = Vector2(768, -768)
+script = ExtResource("2_4w4s0")
+metadata/energy = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="Battery2_0/Battery1_3" index="0"]
+scale = Vector2(0.125, 0.125)
+texture = ExtResource("3_we0hp")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Battery2_0/Battery1_3" index="1"]
+position = Vector2(32, 32)
+scale = Vector2(0.9, 0.9)
+shape = SubResource("RectangleShape2D_d8mh5")
+
+[node name="Battery2_6" type="Area2D" parent="Battery2_0" index="11" groups=["energy"]]
+modulate = Color(1, 0.917647, 0, 1)
+position = Vector2(320, -512)
+script = ExtResource("2_4w4s0")
+metadata/energy = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="Battery2_0/Battery2_6" index="0"]
+scale = Vector2(0.125, 0.125)
+texture = ExtResource("3_we0hp")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Battery2_0/Battery2_6" index="1"]
+position = Vector2(32, 32)
+scale = Vector2(0.9, 0.9)
+shape = SubResource("RectangleShape2D_d8mh5")
+
+[node name="Battery2_7" type="Area2D" parent="Battery2_0" index="12" groups=["energy"]]
+modulate = Color(1, 0.917647, 0, 1)
+position = Vector2(256, -576)
+script = ExtResource("2_4w4s0")
+metadata/energy = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="Battery2_0/Battery2_7" index="0"]
+scale = Vector2(0.125, 0.125)
+texture = ExtResource("3_we0hp")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Battery2_0/Battery2_7" index="1"]
+position = Vector2(32, 32)
+scale = Vector2(0.9, 0.9)
+shape = SubResource("RectangleShape2D_d8mh5")
+
+[node name="Battery2_8" type="Area2D" parent="Battery2_0" index="13" groups=["energy"]]
+modulate = Color(1, 0.917647, 0, 1)
+position = Vector2(192, -696)
+script = ExtResource("2_4w4s0")
+metadata/energy = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="Battery2_0/Battery2_8" index="0"]
+scale = Vector2(0.125, 0.125)
+texture = ExtResource("3_we0hp")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Battery2_0/Battery2_8" index="1"]
+position = Vector2(32, 32)
+scale = Vector2(0.9, 0.9)
+shape = SubResource("RectangleShape2D_d8mh5")
+
+[node name="Battery2_9" type="Area2D" parent="Battery2_0" index="14" groups=["energy"]]
+modulate = Color(1, 0.917647, 0, 1)
+position = Vector2(384, -832)
+script = ExtResource("2_4w4s0")
+metadata/energy = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="Battery2_0/Battery2_9" index="0"]
+scale = Vector2(0.125, 0.125)
+texture = ExtResource("3_we0hp")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Battery2_0/Battery2_9" index="1"]
+position = Vector2(32, 32)
+scale = Vector2(0.9, 0.9)
+shape = SubResource("RectangleShape2D_d8mh5")
+
+[node name="Battery2_10" type="Area2D" parent="Battery2_0" index="15" groups=["energy"]]
+modulate = Color(1, 0.917647, 0, 1)
+position = Vector2(320, -896)
+script = ExtResource("2_4w4s0")
+metadata/energy = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="Battery2_0/Battery2_10" index="0"]
+scale = Vector2(0.125, 0.125)
+texture = ExtResource("3_we0hp")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Battery2_0/Battery2_10" index="1"]
+position = Vector2(32, 32)
+scale = Vector2(0.9, 0.9)
+shape = SubResource("RectangleShape2D_d8mh5")
+
+[node name="Battery2_12" type="Area2D" parent="Battery2_0" index="16" groups=["energy"]]
+modulate = Color(1, 0.917647, 0, 1)
+position = Vector2(384, -960)
+script = ExtResource("2_4w4s0")
+metadata/energy = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="Battery2_0/Battery2_12" index="0"]
+scale = Vector2(0.125, 0.125)
+texture = ExtResource("3_we0hp")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Battery2_0/Battery2_12" index="1"]
+position = Vector2(32, 32)
+scale = Vector2(0.9, 0.9)
+shape = SubResource("RectangleShape2D_d8mh5")
+
+[node name="Battery2_14" type="Area2D" parent="Battery2_0" index="17" groups=["energy"]]
+modulate = Color(1, 0.917647, 0, 1)
+position = Vector2(640, -1024)
+script = ExtResource("2_4w4s0")
+metadata/energy = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="Battery2_0/Battery2_14" index="0"]
+scale = Vector2(0.125, 0.125)
+texture = ExtResource("3_we0hp")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Battery2_0/Battery2_14" index="1"]
+position = Vector2(32, 32)
+scale = Vector2(0.9, 0.9)
+shape = SubResource("RectangleShape2D_d8mh5")
+
+[node name="Battery2_13" type="Area2D" parent="Battery2_0" index="18" groups=["energy"]]
+modulate = Color(1, 0.917647, 0, 1)
+position = Vector2(448, -768)
+script = ExtResource("2_4w4s0")
+metadata/energy = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="Battery2_0/Battery2_13" index="0"]
+scale = Vector2(0.125, 0.125)
+texture = ExtResource("3_we0hp")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Battery2_0/Battery2_13" index="1"]
+position = Vector2(32, 32)
+scale = Vector2(0.9, 0.9)
+shape = SubResource("RectangleShape2D_d8mh5")
+
+[node name="Battery2_11" type="Area2D" parent="Battery2_0" index="19" groups=["energy"]]
+modulate = Color(1, 0.917647, 0, 1)
+position = Vector2(192, -1024)
+script = ExtResource("2_4w4s0")
+metadata/energy = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="Battery2_0/Battery2_11" index="0"]
+scale = Vector2(0.125, 0.125)
+texture = ExtResource("3_we0hp")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Battery2_0/Battery2_11" index="1"]
+position = Vector2(32, 32)
+scale = Vector2(0.9, 0.9)
+shape = SubResource("RectangleShape2D_d8mh5")
+
+[node name="Battery2_1" type="Area2D" parent="Battery2_0" index="20" groups=["energy"]]
+modulate = Color(1, 0.917647, 0, 1)
+position = Vector2(704, -896)
+script = ExtResource("2_4w4s0")
+metadata/energy = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="Battery2_0/Battery2_1" index="0"]
+scale = Vector2(0.125, 0.125)
+texture = ExtResource("3_we0hp")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Battery2_0/Battery2_1" index="1"]
+position = Vector2(32, 32)
+scale = Vector2(0.9, 0.9)
+shape = SubResource("RectangleShape2D_d8mh5")
+
+[node name="Battery2_3" type="Area2D" parent="Battery2_0" index="21" groups=["energy"]]
+modulate = Color(1, 0.917647, 0, 1)
+position = Vector2(640, -704)
+script = ExtResource("2_4w4s0")
+metadata/energy = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="Battery2_0/Battery2_3" index="0"]
+scale = Vector2(0.125, 0.125)
+texture = ExtResource("3_we0hp")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Battery2_0/Battery2_3" index="1"]
+position = Vector2(32, 32)
+scale = Vector2(0.9, 0.9)
+shape = SubResource("RectangleShape2D_d8mh5")
+
+[node name="Battery2_4" type="Area2D" parent="Battery2_0" index="22" groups=["energy"]]
+modulate = Color(1, 0.917647, 0, 1)
+position = Vector2(704, -640)
+script = ExtResource("2_4w4s0")
+metadata/energy = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="Battery2_0/Battery2_4" index="0"]
+scale = Vector2(0.125, 0.125)
+texture = ExtResource("3_we0hp")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Battery2_0/Battery2_4" index="1"]
+position = Vector2(32, 32)
+scale = Vector2(0.9, 0.9)
+shape = SubResource("RectangleShape2D_d8mh5")
+
+[node name="Battery2_5" type="Area2D" parent="Battery2_0" index="23" groups=["energy"]]
+modulate = Color(1, 0.917647, 0, 1)
+position = Vector2(704, -512)
+script = ExtResource("2_4w4s0")
+metadata/energy = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="Battery2_0/Battery2_5" index="0"]
+scale = Vector2(0.125, 0.125)
+texture = ExtResource("3_we0hp")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Battery2_0/Battery2_5" index="1"]
+position = Vector2(32, 32)
+scale = Vector2(0.9, 0.9)
+shape = SubResource("RectangleShape2D_d8mh5")
+
+[node name="Battery2_2" type="Area2D" parent="Battery2_0" index="24" groups=["energy"]]
+modulate = Color(1, 0.917647, 0, 1)
+position = Vector2(768, -832)
+script = ExtResource("2_4w4s0")
+metadata/energy = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="Battery2_0/Battery2_2" index="0"]
+scale = Vector2(0.125, 0.125)
+texture = ExtResource("3_we0hp")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Battery2_0/Battery2_2" index="1"]
+position = Vector2(32, 32)
+scale = Vector2(0.9, 0.9)
+shape = SubResource("RectangleShape2D_d8mh5")
+
+[node name="Battery3_1" type="Area2D" parent="Battery2_0" index="25" groups=["energy"]]
+modulate = Color(1, 0.917647, 0, 1)
+position = Vector2(768, -576)
+script = ExtResource("2_4w4s0")
+metadata/energy = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="Battery2_0/Battery3_1" index="0"]
+scale = Vector2(0.125, 0.125)
+texture = ExtResource("3_we0hp")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Battery2_0/Battery3_1" index="1"]
+position = Vector2(32, 32)
+scale = Vector2(0.9, 0.9)
+shape = SubResource("RectangleShape2D_d8mh5")
+
+[node name="Battery3_2" type="Area2D" parent="Battery2_0" index="26" groups=["energy"]]
+modulate = Color(1, 0.917647, 0, 1)
+position = Vector2(640, -448)
+script = ExtResource("2_4w4s0")
+metadata/energy = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="Battery2_0/Battery3_2" index="0"]
+scale = Vector2(0.125, 0.125)
+texture = ExtResource("3_we0hp")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Battery2_0/Battery3_2" index="1"]
+position = Vector2(32, 32)
+scale = Vector2(0.9, 0.9)
+shape = SubResource("RectangleShape2D_d8mh5")
+
+[node name="Battery3_3" type="Area2D" parent="Battery2_0" index="27" groups=["energy"]]
+modulate = Color(1, 0.917647, 0, 1)
+position = Vector2(576, -576)
+script = ExtResource("2_4w4s0")
+metadata/energy = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="Battery2_0/Battery3_3" index="0"]
+scale = Vector2(0.125, 0.125)
+texture = ExtResource("3_we0hp")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Battery2_0/Battery3_3" index="1"]
+position = Vector2(32, 32)
+scale = Vector2(0.9, 0.9)
+shape = SubResource("RectangleShape2D_d8mh5")
+
+[node name="Battery3_4" type="Area2D" parent="Battery2_0" index="28" groups=["energy"]]
+modulate = Color(1, 0.917647, 0, 1)
+position = Vector2(512, -704)
+script = ExtResource("2_4w4s0")
+metadata/energy = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="Battery2_0/Battery3_4" index="0"]
+scale = Vector2(0.125, 0.125)
+texture = ExtResource("3_we0hp")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Battery2_0/Battery3_4" index="1"]
+position = Vector2(32, 32)
+scale = Vector2(0.9, 0.9)
+shape = SubResource("RectangleShape2D_d8mh5")
+
+[node name="Battery3_5" type="Area2D" parent="Battery2_0" index="29" groups=["energy"]]
+modulate = Color(1, 0.917647, 0, 1)
+position = Vector2(320, -576)
+script = ExtResource("2_4w4s0")
+metadata/energy = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="Battery2_0/Battery3_5" index="0"]
+scale = Vector2(0.125, 0.125)
+texture = ExtResource("3_we0hp")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Battery2_0/Battery3_5" index="1"]
+position = Vector2(32, 32)
+scale = Vector2(0.9, 0.9)
+shape = SubResource("RectangleShape2D_d8mh5")
+
+[node name="Battery3_6" type="Area2D" parent="Battery2_0" index="30" groups=["energy"]]
+modulate = Color(1, 0.917647, 0, 1)
+position = Vector2(256, -768)
+script = ExtResource("2_4w4s0")
+metadata/energy = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="Battery2_0/Battery3_6" index="0"]
+scale = Vector2(0.125, 0.125)
+texture = ExtResource("3_we0hp")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Battery2_0/Battery3_6" index="1"]
+position = Vector2(32, 32)
+scale = Vector2(0.9, 0.9)
+shape = SubResource("RectangleShape2D_d8mh5")
+
+[node name="Battery3_7" type="Area2D" parent="Battery2_0" index="31" groups=["energy"]]
+modulate = Color(1, 0.917647, 0, 1)
+position = Vector2(320, -1024)
+script = ExtResource("2_4w4s0")
+metadata/energy = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="Battery2_0/Battery3_7" index="0"]
+scale = Vector2(0.125, 0.125)
+texture = ExtResource("3_we0hp")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Battery2_0/Battery3_7" index="1"]
+position = Vector2(32, 32)
+scale = Vector2(0.9, 0.9)
+shape = SubResource("RectangleShape2D_d8mh5")
+
+[node name="Battery3_8" type="Area2D" parent="Battery2_0" index="32" groups=["energy"]]
+modulate = Color(1, 0.917647, 0, 1)
+position = Vector2(576, -960)
+script = ExtResource("2_4w4s0")
+metadata/energy = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="Battery2_0/Battery3_8" index="0"]
+scale = Vector2(0.125, 0.125)
+texture = ExtResource("3_we0hp")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Battery2_0/Battery3_8" index="1"]
+position = Vector2(32, 32)
+scale = Vector2(0.9, 0.9)
+shape = SubResource("RectangleShape2D_d8mh5")
+
+[node name="Battery3_9" type="Area2D" parent="Battery2_0" index="33" groups=["energy"]]
+modulate = Color(1, 0.917647, 0, 1)
+position = Vector2(512, -832)
+script = ExtResource("2_4w4s0")
+metadata/energy = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="Battery2_0/Battery3_9" index="0"]
+scale = Vector2(0.125, 0.125)
+texture = ExtResource("3_we0hp")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Battery2_0/Battery3_9" index="1"]
+position = Vector2(32, 32)
+scale = Vector2(0.9, 0.9)
+shape = SubResource("RectangleShape2D_d8mh5")
+
+[node name="Battery4_1" type="Area2D" parent="Battery2_0" index="34" groups=["energy"]]
+modulate = Color(1, 0.917647, 0, 1)
+position = Vector2(384, -448)
+script = ExtResource("2_4w4s0")
+metadata/energy = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="Battery2_0/Battery4_1" index="0"]
+scale = Vector2(0.125, 0.125)
+texture = ExtResource("3_we0hp")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Battery2_0/Battery4_1" index="1"]
+position = Vector2(32, 32)
+scale = Vector2(0.9, 0.9)
+shape = SubResource("RectangleShape2D_d8mh5")
+
+[node name="Screw2" type="Area2D" parent="." index="11" groups=["screws"]]
+position = Vector2(448, 192)
+
+[node name="Icon" type="Sprite2D" parent="Screw2" index="0"]
+modulate = Color(0.403922, 0.592157, 1, 1)
+scale = Vector2(0.125, 0.125)
+texture = ExtResource("4_bxx4e")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Screw2" index="1"]
+position = Vector2(32, 32)
+scale = Vector2(0.9, 0.9)
+shape = SubResource("RectangleShape2D_y88yg")
+
+[node name="Screw3" type="Area2D" parent="." index="12" groups=["screws"]]
+position = Vector2(384, 576)
+
+[node name="Icon" type="Sprite2D" parent="Screw3" index="0"]
+modulate = Color(0.403922, 0.592157, 1, 1)
+scale = Vector2(0.125, 0.125)
+texture = ExtResource("4_bxx4e")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Screw3" index="1"]
+position = Vector2(32, 32)
+scale = Vector2(0.9, 0.9)
+shape = SubResource("RectangleShape2D_y88yg")
+
+[node name="Screw5" type="Area2D" parent="." index="13" groups=["screws"]]
+position = Vector2(64, 0)
+
+[node name="Icon" type="Sprite2D" parent="Screw5" index="0"]
+modulate = Color(0.403922, 0.592157, 1, 1)
+scale = Vector2(0.125, 0.125)
+texture = ExtResource("4_bxx4e")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Screw5" index="1"]
+position = Vector2(32, 32)
+scale = Vector2(0.9, 0.9)
+shape = SubResource("RectangleShape2D_y88yg")
+
+[node name="Screw" parent="." index="19"]
+position = Vector2(128, 384)
+
+[node name="Player" parent="." index="20"]
+next_scene = ExtResource("5_xb4e2")

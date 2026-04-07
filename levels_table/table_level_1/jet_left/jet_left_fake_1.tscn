@@ -1,0 +1,55 @@
+[gd_scene load_steps=3 format=3 uid="uid://boiuk8b1my6bp"]
+
+[ext_resource type="Texture2D" uid="uid://bx6kgnpy443ug" path="res://Shapes/Kuzel.png" id="1_3eo6n"]
+[ext_resource type="Texture2D" uid="uid://c0jds7plmlmf4" path="res://Shapes/Half_Circle.png" id="3_aqwan"]
+
+[node name="JetReference" type="Control"]
+modulate = Color(0, 0, 0, 1)
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 100.0
+offset_bottom = 100.0
+pivot_offset = Vector2(50, 50)
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="Rotator" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 100.0
+offset_bottom = 100.0
+pivot_offset = Vector2(50, 50)
+
+[node name="Kuzel" type="TextureRect" parent="Rotator"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -11.0
+offset_top = -9.37
+offset_right = 11.0
+offset_bottom = 46.63
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_3eo6n")
+expand_mode = 1
+
+[node name="HalfCircle" type="TextureRect" parent="Rotator"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -40.0
+offset_top = -40.0
+offset_right = 40.0
+offset_bottom = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_aqwan")
+expand_mode = 1

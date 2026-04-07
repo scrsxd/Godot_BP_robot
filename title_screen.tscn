@@ -1,0 +1,228 @@
+[gd_scene load_steps=20 format=3 uid="uid://l5okpa6hrmob"]
+
+[ext_resource type="Script" path="res://story_screen.gd" id="1_xtepq"]
+[ext_resource type="PackedScene" uid="uid://dmouupacsj13c" path="res://Scenes/intro_scene.tscn" id="2_54bxg"]
+[ext_resource type="Texture2D" uid="uid://2xsxdsed850u" path="res://Scenes/BG_IMGS/Nature Landscapes Free Pixel Art/nature_3/1.png" id="3_a1a0g"]
+[ext_resource type="Texture2D" uid="uid://cvyn5sck86b7k" path="res://Scenes/BG_IMGS/Nature Landscapes Free Pixel Art/nature_3/2.png" id="4_uy830"]
+[ext_resource type="Texture2D" uid="uid://bp18mlqnr5dqw" path="res://Scenes/ROBOT_IMGS/ROBOT_RAKETA.png" id="4_wyt5h"]
+[ext_resource type="Texture2D" uid="uid://bad1pdrq8vbne" path="res://Scenes/BG_IMGS/Nature Landscapes Free Pixel Art/nature_3/3.png" id="5_bjem7"]
+[ext_resource type="Texture2D" uid="uid://b0cbh65soa4pa" path="res://Scenes/BG_IMGS/Nature Landscapes Free Pixel Art/nature_3/4.png" id="6_qmmih"]
+[ext_resource type="Texture2D" uid="uid://fm2qay3dn7ak" path="res://panel_grid_paper.png" id="7_gkj4s"]
+[ext_resource type="Texture2D" uid="uid://cgqbtof8cx8cd" path="res://panel_grey_bolts.png" id="8_k0bfk"]
+[ext_resource type="Texture2D" uid="uid://dn4ex5t3ej2c6" path="res://Scenes/ROBOT_IMGS/ROBOT_RAKETA_OHEN.png" id="8_pm60c"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_tfrhm"]
+font_size = 50
+outline_size = 5
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 5
+shadow_color = Color(0, 0, 0, 0.458824)
+shadow_offset = Vector2(5, 5)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c6b6d"]
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3mogm"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kq1vu"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aku76"]
+atlas = ExtResource("8_pm60c")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tyhgf"]
+atlas = ExtResource("8_pm60c")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3qvc5"]
+atlas = ExtResource("8_pm60c")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tfi7o"]
+atlas = ExtResource("8_pm60c")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_h2md6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aku76")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tyhgf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3qvc5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tfi7o")
+}],
+"loop": true,
+"name": &"default",
+"speed": 7.5
+}]
+
+[node name="StoryScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xtepq")
+next_scene = ExtResource("2_54bxg")
+scroll_speed = -300.0
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.2, 0.2)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+texture_filter = 1
+texture_repeat = 2
+position = Vector2(576, 319)
+scale = Vector2(2, 1.98148)
+texture = ExtResource("3_a1a0g")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.4, 0.4)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+texture_filter = 1
+texture_repeat = 2
+position = Vector2(576, 319)
+scale = Vector2(2, 1.98148)
+texture = ExtResource("4_uy830")
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.6, 0.6)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3"]
+texture_filter = 1
+texture_repeat = 2
+position = Vector2(576, 319)
+scale = Vector2(2, 1.98148)
+texture = ExtResource("5_bjem7")
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.8, 0.8)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer4"]
+texture_filter = 1
+texture_repeat = 2
+position = Vector2(576, 319)
+scale = Vector2(2, 1.98148)
+texture = ExtResource("6_qmmih")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+visible = false
+modulate = Color(1, 0.847059, 0.65098, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 520.0
+offset_top = 328.0
+offset_right = -56.0
+offset_bottom = -96.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_gkj4s")
+patch_margin_left = 30
+patch_margin_top = 30
+patch_margin_right = 30
+patch_margin_bottom = 30
+
+[node name="NinePatchRect2" type="NinePatchRect" parent="."]
+modulate = Color(0.937255, 0.627451, 0, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 536.0
+offset_top = 344.0
+offset_right = -48.0
+offset_bottom = -88.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("8_k0bfk")
+patch_margin_left = 30
+patch_margin_top = 30
+patch_margin_right = 30
+patch_margin_bottom = 30
+
+[node name="Label" type="Label" parent="NinePatchRect2"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -178.5
+offset_bottom = 178.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Robot P.3.P.4. a ztroskotaný K.4.P.R."
+label_settings = SubResource("LabelSettings_tfrhm")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="NextButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 352.0
+offset_top = -116.0
+offset_right = 552.0
+offset_bottom = -44.0
+grow_horizontal = 2
+grow_vertical = 0
+focus_mode = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_c6b6d")
+theme_override_styles/hover = SubResource("StyleBoxFlat_3mogm")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_kq1vu")
+text = "START"
+
+[node name="RobotRaketa" type="Sprite2D" parent="."]
+position = Vector2(869.375, 122.688)
+scale = Vector2(1.58301, 1.58301)
+texture = ExtResource("4_wyt5h")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="RobotRaketa"]
+show_behind_parent = true
+position = Vector2(120.53, 7.53656)
+scale = Vector2(1.35345, 1.35345)
+sprite_frames = SubResource("SpriteFrames_h2md6")
+frame_progress = 0.0820934
+
+[node name="FadeOutRect" type="ColorRect" parent="."]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)

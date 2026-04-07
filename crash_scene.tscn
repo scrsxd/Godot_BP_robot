@@ -1,0 +1,255 @@
+[gd_scene load_steps=22 format=3 uid="uid://dybamcsie05qn"]
+
+[ext_resource type="Script" path="res://Scenes/crash_scene.gd" id="1_usxhv"]
+[ext_resource type="Texture2D" uid="uid://bkm0rvapixpg" path="res://Scenes/BG_IMGS/Nature Landscapes Free Pixel Art/nature_1/1.png" id="2_2xp5q"]
+[ext_resource type="PackedScene" uid="uid://decgl7bhm3kgq" path="res://levels_binary_code/binary_level_0.tscn" id="2_c767g"]
+[ext_resource type="Texture2D" uid="uid://234ulhfew6ln" path="res://Scenes/BG_IMGS/Nature Landscapes Free Pixel Art/nature_1/2.png" id="3_vleq5"]
+[ext_resource type="Texture2D" uid="uid://32pxdhxkjkwq" path="res://Scenes/BG_IMGS/Nature Landscapes Free Pixel Art/nature_1/3.png" id="4_wctb6"]
+[ext_resource type="Texture2D" uid="uid://buq000hfcrbvs" path="res://Scenes/BG_IMGS/Nature Landscapes Free Pixel Art/nature_1/10.png" id="5_trddn"]
+[ext_resource type="Texture2D" uid="uid://b6lqd40e0f0bu" path="res://Scenes/ROBOT_IMGS/ROBOT_RAKETA_CRASH0.png" id="7_76p3e"]
+[ext_resource type="Texture2D" uid="uid://dn4ex5t3ej2c6" path="res://Scenes/ROBOT_IMGS/ROBOT_RAKETA_OHEN.png" id="7_qhpwb"]
+[ext_resource type="Texture2D" uid="uid://cfkhagd5404tl" path="res://Scenes/BG_IMGS/Nature Landscapes Free Pixel Art/nature_1/5.png" id="8_x3jyn"]
+[ext_resource type="Texture2D" uid="uid://brwofclykqvqx" path="res://Scenes/BG_IMGS/Nature Landscapes Free Pixel Art/nature_1/6.png" id="9_uhho2"]
+[ext_resource type="Texture2D" uid="uid://crjjkuwxr3sf0" path="res://Scenes/BG_IMGS/Nature Landscapes Free Pixel Art/nature_1/8.png" id="10_cfqpj"]
+[ext_resource type="Texture2D" uid="uid://egq7uyafqgua" path="res://Scenes/BG_IMGS/Nature Landscapes Free Pixel Art/nature_1/7.png" id="11_ub2nr"]
+[ext_resource type="StyleBox" uid="uid://7u6sm25uko3q" path="res://Scenes/black_button.tres" id="12_a67hq"]
+[ext_resource type="Texture2D" uid="uid://cgqbtof8cx8cd" path="res://panel_grey_bolts.png" id="13_14w4c"]
+[ext_resource type="StyleBox" uid="uid://d1bv8m12tsodj" path="res://Scenes/white_button.tres" id="13_j4w82"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aku76"]
+atlas = ExtResource("7_qhpwb")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tyhgf"]
+atlas = ExtResource("7_qhpwb")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3qvc5"]
+atlas = ExtResource("7_qhpwb")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tfi7o"]
+atlas = ExtResource("7_qhpwb")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_h2md6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aku76")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tyhgf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3qvc5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tfi7o")
+}],
+"loop": true,
+"name": &"default",
+"speed": 7.5
+}]
+
+[sub_resource type="LabelSettings" id="LabelSettings_6lqn6"]
+font_size = 22
+outline_size = 3
+outline_color = Color(0, 0, 0, 1)
+
+[node name="CrashScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_usxhv")
+next_scene = ExtResource("2_c767g")
+dialogue_texts = Array[String](["Systém zablokoval veškeré ovládání, aby nikdo nevzlétl s rizikem nehody. Bohužel P.3.P.4. měl tu smůlu, že se mu šroubky uvolnili právě během letu...", "Naštěstí je raketová loď K.4.P.R. vytvořena z vesmírné oceli a pád jako takový si s K.4.P.R.em málokdy odnese škrábanec.", "Nicméně P.3.P.0.vi bylo divné, proč se K.4.P.R. nechce znovu nastartovat, aby mohl znovu vzletět a pokračovat ve své misi.", "Pokusil se dostat ven z K.4.P.R.a, aby zkontroloval situaci z venku,  ale marně! Vše je zablokované, včetně dveří. Nezbývá nic jiného, než vše odlblokovat zadáním nouzového kódu."])
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.2, 0.2)
+motion_mirroring = Vector2(1152, 640)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+texture_filter = 1
+texture_repeat = 2
+position = Vector2(576, 319)
+scale = Vector2(2, 1.98148)
+texture = ExtResource("2_2xp5q")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.2, 0.2)
+motion_mirroring = Vector2(1152, 640)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+texture_filter = 1
+texture_repeat = 2
+position = Vector2(576, 319)
+scale = Vector2(2, 1.98148)
+texture = ExtResource("3_vleq5")
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0, 0)
+motion_mirroring = Vector2(1152, 640)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3"]
+texture_filter = 1
+texture_repeat = 2
+position = Vector2(576, 319)
+scale = Vector2(2, 1.98148)
+texture = ExtResource("4_wctb6")
+
+[node name="ParallaxLayer8" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0, 0)
+motion_mirroring = Vector2(1152, 640)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer8"]
+texture_filter = 1
+texture_repeat = 2
+position = Vector2(576, 319)
+scale = Vector2(2, 1.98148)
+texture = ExtResource("5_trddn")
+
+[node name="RobotRaketa" type="Sprite2D" parent="ParallaxBackground"]
+position = Vector2(640, 440)
+rotation = -0.0785398
+scale = Vector2(2.25, 2.25)
+texture = ExtResource("7_76p3e")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="ParallaxBackground/RobotRaketa"]
+visible = false
+show_behind_parent = true
+position = Vector2(120.53, 7.53656)
+scale = Vector2(1.35345, 1.35345)
+sprite_frames = SubResource("SpriteFrames_h2md6")
+frame_progress = 0.0820934
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0, 0)
+motion_mirroring = Vector2(1152, 640)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer4"]
+texture_filter = 1
+texture_repeat = 2
+position = Vector2(576, 319)
+scale = Vector2(2, 1.98148)
+texture = ExtResource("8_x3jyn")
+
+[node name="ParallaxLayer5" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0, 0)
+motion_mirroring = Vector2(1152, 640)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer5"]
+texture_filter = 1
+texture_repeat = 2
+position = Vector2(328, 312)
+scale = Vector2(2, 1.98148)
+texture = ExtResource("9_uhho2")
+
+[node name="ParallaxLayer7" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0, 0)
+motion_mirroring = Vector2(1152, 640)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer7"]
+texture_filter = 1
+texture_repeat = 2
+position = Vector2(576, 319)
+scale = Vector2(2, 1.98148)
+texture = ExtResource("10_cfqpj")
+
+[node name="ParallaxLayer6" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0, 0)
+motion_mirroring = Vector2(1152, 640)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer6"]
+texture_filter = 1
+texture_repeat = 2
+position = Vector2(864, 320)
+scale = Vector2(2, 1.98148)
+texture = ExtResource("11_ub2nr")
+
+[node name="NinePatchRect2" type="NinePatchRect" parent="."]
+modulate = Color(0.937255, 0.627451, 0, 1)
+self_modulate = Color(1, 1, 1, 0.901961)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 280.0
+offset_top = 504.0
+offset_right = -16.0
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("13_14w4c")
+patch_margin_left = 30
+patch_margin_top = 30
+patch_margin_right = 30
+patch_margin_bottom = 30
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+modulate = Color(0.537255, 0.466667, 0.278431, 0.670588)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 528.0
+offset_top = 488.0
+offset_right = -24.0
+offset_bottom = -32.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NextButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 440.0
+offset_top = -48.0
+offset_right = 579.0
+offset_bottom = -6.0
+grow_horizontal = 2
+grow_vertical = 0
+focus_mode = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = ExtResource("12_a67hq")
+theme_override_styles/hover = ExtResource("13_j4w82")
+theme_override_styles/pressed = ExtResource("12_a67hq")
+text = "Pokračovat"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 296.0
+offset_top = 512.0
+offset_right = -32.0
+offset_bottom = -24.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Překlad ložes. Překlad ložes. Překlad ložes. Překlad ložes. Překlad ložes. Překlad ložes. Překlad ložes. "
+label_settings = SubResource("LabelSettings_6lqn6")
+autowrap_mode = 3
+
+[node name="FadeOutRect" type="ColorRect" parent="."]
+visible = false
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)

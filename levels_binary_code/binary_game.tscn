@@ -1,0 +1,560 @@
+[gd_scene load_steps=29 format=3 uid="uid://c068ld5fbppta"]
+
+[ext_resource type="Script" path="res://levels_binary_code/BinaryGame.gd" id="1_k1m8q"]
+[ext_resource type="Texture2D" uid="uid://cf12wuevii60u" path="res://panel_grey_bolts_dark.png" id="2_cw33j"]
+[ext_resource type="Texture2D" uid="uid://bwtn8hocgoid0" path="res://panel_grey_bolts_blue.png" id="3_8d4m1"]
+[ext_resource type="Texture2D" uid="uid://cgqbtof8cx8cd" path="res://panel_grey_bolts.png" id="4_jbu7k"]
+[ext_resource type="Texture2D" uid="uid://chv1f0q2wlaye" path="res://panel_grey_dark.png" id="5_1mh00"]
+[ext_resource type="Texture2D" uid="uid://b5jrvfc588rqo" path="res://pattern_diagonal_transparent_small.png" id="6_w0f2k"]
+[ext_resource type="Texture2D" uid="uid://blohnvkkipi1i" path="res://pattern_grid_blueprint.png" id="7_pjbdl"]
+[ext_resource type="PackedScene" uid="uid://bs6o052g7jwra" path="res://popup.tscn" id="8_3rsox"]
+[ext_resource type="Texture2D" uid="uid://0bxdmf6bsaqv" path="res://pattern_diagonal_red_large.png" id="9_c73qj"]
+[ext_resource type="PackedScene" uid="uid://cd4nrndaj1liu" path="res://levels_table/table_level_1/jet_reference.tscn" id="10_xajag"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_uea16"]
+texture = ExtResource("3_8d4m1")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2dmhc"]
+texture = ExtResource("6_w0f2k")
+use_texture_padding = false
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7dc6t"]
+texture = ExtResource("4_jbu7k")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hwyxf"]
+texture = ExtResource("7_pjbdl")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_5fr2q"]
+sources/0 = SubResource("TileSetAtlasSource_uea16")
+sources/1 = SubResource("TileSetAtlasSource_2dmhc")
+sources/2 = SubResource("TileSetAtlasSource_7dc6t")
+sources/3 = SubResource("TileSetAtlasSource_hwyxf")
+
+[sub_resource type="SystemFont" id="SystemFont_4bml1"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_jfybs"]
+font = SubResource("SystemFont_4bml1")
+font_size = 29
+
+[sub_resource type="LabelSettings" id="LabelSettings_8fgsa"]
+font_size = 30
+
+[sub_resource type="LabelSettings" id="LabelSettings_2sks5"]
+font_size = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g7lj6"]
+bg_color = Color(0, 0.427451, 0.945098, 0.364706)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="LabelSettings" id="LabelSettings_5g3ar"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nnlle"]
+texture = ExtResource("9_c73qj")
+0:0/0 = 0
+1:0/0 = 0
+3:0/0 = 0
+0:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_xu6qo"]
+sources/0 = SubResource("TileSetAtlasSource_nnlle")
+
+[sub_resource type="LabelSettings" id="LabelSettings_bps2t"]
+font_size = 24
+
+[sub_resource type="LabelSettings" id="LabelSettings_rr3wg"]
+font_size = 21
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cnjvg"]
+bg_color = Color(0.0862745, 0.466667, 0.560784, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+shadow_color = Color(0, 0, 0, 0.360784)
+shadow_size = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dnxk7"]
+bg_color = Color(0.176471, 0.709804, 0.843137, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_color = Color(0, 0, 0, 0.266667)
+shadow_size = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lo5k7"]
+bg_color = Color(0.0862745, 0.466667, 0.560784, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_color = Color(0, 0, 0, 0.266667)
+shadow_size = 10
+
+[node name="BinaryGame" type="Control" node_paths=PackedStringArray("popup_ui")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_k1m8q")
+popup_ui = NodePath("MasterPopup")
+intro_title = "Odemkni loď"
+win_text = "Zadal jsi správný kód!"
+win_button_text = "Pokračovat"
+lose_title = "Špatný kód"
+lose_text = "Tvůj tlačítkový kód se nerovná tomu správnému."
+
+[node name="NinePatchRect3" type="NinePatchRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_cw33j")
+patch_margin_left = 30
+patch_margin_top = 30
+patch_margin_right = 30
+patch_margin_bottom = 30
+
+[node name="NinePatchRect5" type="NinePatchRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.167
+anchor_top = 0.2
+anchor_right = 0.833
+anchor_bottom = 0.85
+offset_left = -176.384
+offset_top = -8.0
+offset_right = -159.616
+offset_bottom = -8.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_8d4m1")
+patch_margin_left = 30
+patch_margin_top = 30
+patch_margin_right = 30
+patch_margin_bottom = 30
+
+[node name="NinePatchRect8" type="NinePatchRect" parent="."]
+modulate = Color(0.729412, 0.729412, 0.729412, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.167
+anchor_top = 0.2
+anchor_right = 0.833
+anchor_bottom = 0.85
+offset_left = -168.384
+offset_top = 112.0
+offset_right = -167.616
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_jbu7k")
+patch_margin_left = 30
+patch_margin_top = 30
+patch_margin_right = 30
+patch_margin_bottom = 30
+
+[node name="NinePatchRect3´7" type="NinePatchRect" parent="."]
+modulate = Color(0.729412, 0.729412, 0.729412, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.167
+anchor_top = 0.2
+anchor_right = 0.833
+anchor_bottom = 0.85
+offset_left = -168.384
+offset_right = -167.616
+offset_bottom = -304.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_1mh00")
+patch_margin_left = 30
+patch_margin_top = 30
+patch_margin_right = 30
+patch_margin_bottom = 30
+
+[node name="TileMap3" type="TileMap" parent="."]
+position = Vector2(-160, -8)
+tile_set = SubResource("TileSet_5fr2q")
+format = 2
+layer_0/modulate = Color(1, 1, 1, 0.396078)
+
+[node name="NinePatchRect6" type="NinePatchRect" parent="."]
+modulate = Color(0.729412, 0.729412, 0.729412, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.167
+anchor_top = 0.2
+anchor_right = 0.833
+anchor_bottom = 0.85
+offset_left = -40.384
+offset_top = 120.0
+offset_right = -287.616
+offset_bottom = -72.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_jbu7k")
+patch_margin_left = 30
+patch_margin_top = 30
+patch_margin_right = 30
+patch_margin_bottom = 30
+
+[node name="NinePatchRect7" type="NinePatchRect" parent="."]
+modulate = Color(0.360784, 0.87451, 0.886275, 0.380392)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.167
+anchor_top = 0.2
+anchor_right = 0.833
+anchor_bottom = 0.85
+offset_left = -32.384
+offset_top = 128.0
+offset_right = -295.616
+offset_bottom = -80.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_8d4m1")
+patch_margin_left = 30
+patch_margin_top = 30
+patch_margin_right = 30
+patch_margin_bottom = 30
+
+[node name="TileMap4" type="TileMap" parent="."]
+position = Vector2(-160, -8)
+tile_set = SubResource("TileSet_5fr2q")
+format = 2
+layer_0/tile_data = PackedInt32Array(720916, 65537, 0, 720918, 65537, 0, 720919, 1, 0, 720920, 65537, 0, 720921, 1, 0, 720922, 65537, 0, 720923, 1, 0, 720924, 65537, 0, 786460, 65537, 1, 720925, 1, 0, 786461, 1, 1, 720926, 65537, 0, 786462, 65537, 1, 720927, 1, 0, 786463, 1, 1, 720928, 65537, 0, 786464, 65537, 1, 720929, 1, 0, 786465, 1, 1, 720930, 65537, 0, 786466, 65537, 1, 720931, 65537, 0, 786467, 65537, 1, 720932, 1, 0, 786468, 1, 1, 720933, 65537, 0, 786469, 65537, 1, 720934, 1, 0, 786470, 1, 1, 720935, 65537, 0, 786471, 65537, 1, 720936, 1, 0, 786472, 1, 1, 720937, 65537, 0, 786473, 65537, 1, 720938, 1, 0, 786474, 1, 1, 720939, 1, 0, 786475, 1, 1, 720940, 65537, 0, 720941, 1, 0, 720942, 65537, 0, 720943, 1, 0, 720944, 65537, 0, 720945, 1, 0, 720946, 65537, 0, 720947, 1, 0, 720948, 65537, 0, 720949, 1, 0, 720950, 65537, 0, 720951, 1, 0, 589838, 65537, 0, 655374, 65537, 1, 589839, 65537, 0, 655375, 65537, 1, 589840, 1, 0, 655376, 1, 1, 589841, 65537, 0, 655377, 65537, 1, 589842, 1, 0, 655378, 1, 1, 589843, 65537, 0, 655379, 65537, 1, 589844, 1, 0, 655380, 1, 1, 589845, 65537, 0, 655381, 65537, 1, 589846, 1, 0, 655382, 1, 1, 589847, 65537, 0, 655383, 65537, 1, 589848, 1, 0, 655384, 1, 1, 589849, 65537, 0, 655385, 65537, 1, 720912, 1, 0, 786448, 1, 1, 720913, 65537, 0, 786449, 65537, 1, 720910, 65537, 0, 786446, 65537, 1, 720911, 65537, 0, 786447, 65537, 1, 720914, 1, 0, 786450, 1, 1, 720915, 1, 0, 786451, 1, 1, 589850, 1, 0, 655386, 1, 1, 589851, 65537, 0, 655387, 65537, 1, 589852, 1, 0, 655388, 1, 1, 589853, 65537, 0, 655389, 65537, 1, 589854, 1, 0, 655390, 1, 1, 589855, 65537, 0, 655391, 65537, 1, 589856, 1, 0, 655392, 1, 1, 589857, 65537, 0, 655393, 65537, 1, 589858, 1, 0, 655394, 1, 1, 589859, 65537, 0, 655395, 65537, 1, 589860, 1, 0, 655396, 1, 1, 589861, 65537, 0, 655397, 65537, 1, 589862, 1, 0, 655398, 1, 1, 589863, 65537, 0, 655399, 65537, 1, 589864, 1, 0, 655400, 1, 1, 589865, 65537, 0, 655401, 65537, 1, 589866, 1, 0, 655402, 1, 1, 589867, 65537, 0, 655403, 65537, 1, 589868, 1, 0, 655404, 1, 1, 589869, 65537, 0, 655405, 65537, 1, 589870, 1, 0, 655406, 1, 1, 589871, 65537, 0, 655407, 65537, 1, 589872, 1, 0, 655408, 1, 1, 589873, 65537, 0, 655409, 65537, 1, 589878, 1, 0, 655414, 1, 1, 589879, 65537, 0, 655415, 65537, 1, 589876, 1, 0, 655412, 1, 1, 589877, 65537, 0, 655413, 65537, 1, 589874, 1, 0, 655410, 1, 1, 589875, 65537, 0, 655411, 65537, 1, 851989, 1, 0, 851990, 65537, 0, 917526, 65537, 1, 851991, 1, 0, 917527, 1, 1, 851992, 65537, 0, 917528, 65537, 1, 851993, 1, 0, 917529, 1, 1, 851994, 65537, 0, 917530, 65537, 1, 851995, 1, 0, 917531, 1, 1, 917532, 65537, 1, 917533, 1, 1, 917534, 65537, 1, 917535, 1, 1, 917536, 65537, 1, 917537, 1, 1, 917538, 65537, 1, 917539, 1, 1, 917540, 65537, 1, 917541, 1, 1, 917542, 65537, 1, 917543, 1, 1, 917544, 65537, 1, 917545, 1, 1, 917546, 65537, 1, 917547, 1, 1, 852012, 65537, 0, 917548, 65537, 1, 852013, 1, 0, 917549, 1, 1, 852014, 65537, 0, 917550, 65537, 1, 852015, 1, 0, 917551, 1, 1, 852016, 65537, 0, 917552, 65537, 1, 852017, 1, 0, 917553, 1, 1, 852018, 65537, 0, 917554, 65537, 1, 852019, 1, 0, 852020, 65537, 0, 852021, 1, 0, 720952, 65537, 0, 720953, 1, 0, 589880, 1, 0, 655416, 1, 1, 589881, 1, 0, 655417, 1, 1, 589837, 1, 0, 655373, 1, 1, 720909, 1, 0, 786445, 1, 1, 589882, 65537, 0, 655418, 65537, 1, 720954, 65537, 0, 851981, 1, 0, 917517, 1, 1, 851982, 65537, 0, 917518, 65537, 1, 851983, 1, 0, 917519, 1, 1, 851984, 65537, 0, 917520, 65537, 1, 851985, 1, 0, 917521, 1, 1, 851986, 65537, 0, 917522, 65537, 1, 851987, 1, 0, 917523, 1, 1, 851988, 65537, 0, 917524, 65537, 1, 917525, 1, 1, 786455, 1, 1, 786456, 65537, 1, 720917, 1, 0, 786453, 1, 1, 786454, 65537, 1, 786452, 65537, 1, 786457, 1, 1, 786458, 65537, 1, 786459, 1, 1, 851999, 1, 0, 852000, 65537, 0, 851997, 1, 0, 851998, 65537, 0, 851996, 65537, 0, 852001, 1, 0, 852002, 65537, 0, 852003, 1, 0, 852004, 65537, 0, 852005, 1, 0, 852006, 65537, 0, 852007, 1, 0, 852008, 65537, 0, 852009, 1, 0, 852010, 65537, 0, 852011, 1, 0, 786481, 1, 1, 786482, 65537, 1, 786479, 1, 1, 786480, 65537, 1, 786477, 1, 1, 786478, 65537, 1, 786476, 65537, 1, 786483, 1, 1, 786484, 65537, 1, 786485, 1, 1, 786486, 65537, 1, 786487, 1, 1, 786488, 65537, 1, 786489, 1, 1, 786490, 65537, 1, 852023, 1, 0, 917559, 1, 1, 852024, 65537, 0, 917560, 65537, 1, 917557, 1, 1, 852022, 65537, 0, 917558, 65537, 1, 917555, 1, 1, 917556, 65537, 1, 852025, 1, 0, 917561, 1, 1, 852026, 65537, 0, 917562, 65537, 1, 851980, 1, 0, 786444, 1, 0, 720908, 1, 0, 655372, 1, 0, 589836, 1, 0, 917516, 1, 0)
+
+[node name="Label55" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -381.0
+offset_top = 165.0
+offset_right = 61.0
+offset_bottom = 205.0
+grow_horizontal = 2
+text = "Instalace součástky do systému"
+label_settings = SubResource("LabelSettings_jfybs")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -160.0
+offset_top = -8.0
+offset_right = -160.0
+offset_bottom = 88.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="TargetLabel" type="Label" parent="CenterContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Cíl: ???"
+label_settings = SubResource("LabelSettings_8fgsa")
+
+[node name="CurrentLabel" type="Label" parent="CenterContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Teď: 0"
+label_settings = SubResource("LabelSettings_2sks5")
+
+[node name="ButtonRow" type="HBoxContainer" parent="CenterContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="CheckButton" type="CheckButton" parent="CenterContainer/VBoxContainer/ButtonRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+
+[node name="CheckButton2" type="CheckButton" parent="CenterContainer/VBoxContainer/ButtonRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+
+[node name="CheckButton3" type="CheckButton" parent="CenterContainer/VBoxContainer/ButtonRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+
+[node name="CheckButton4" type="CheckButton" parent="CenterContainer/VBoxContainer/ButtonRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+
+[node name="CheckButton5" type="CheckButton" parent="CenterContainer/VBoxContainer/ButtonRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+
+[node name="CheckButton6" type="CheckButton" parent="CenterContainer/VBoxContainer/ButtonRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+
+[node name="CheckButton7" type="CheckButton" parent="CenterContainer/VBoxContainer/ButtonRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+
+[node name="CheckButton8" type="CheckButton" parent="CenterContainer/VBoxContainer/ButtonRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+
+[node name="NumberLabelsRow" type="HBoxContainer" parent="CenterContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer/NumberLabelsRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_g7lj6")
+text = "1"
+label_settings = SubResource("LabelSettings_5g3ar")
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="CenterContainer/VBoxContainer/NumberLabelsRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_g7lj6")
+text = "2"
+label_settings = SubResource("LabelSettings_5g3ar")
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="CenterContainer/VBoxContainer/NumberLabelsRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_g7lj6")
+text = "4"
+label_settings = SubResource("LabelSettings_5g3ar")
+horizontal_alignment = 1
+
+[node name="Label4" type="Label" parent="CenterContainer/VBoxContainer/NumberLabelsRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_g7lj6")
+text = "8"
+label_settings = SubResource("LabelSettings_5g3ar")
+horizontal_alignment = 1
+
+[node name="Label5" type="Label" parent="CenterContainer/VBoxContainer/NumberLabelsRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_g7lj6")
+text = "16"
+label_settings = SubResource("LabelSettings_5g3ar")
+horizontal_alignment = 1
+
+[node name="Label6" type="Label" parent="CenterContainer/VBoxContainer/NumberLabelsRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_g7lj6")
+text = "32"
+label_settings = SubResource("LabelSettings_5g3ar")
+horizontal_alignment = 1
+
+[node name="Label7" type="Label" parent="CenterContainer/VBoxContainer/NumberLabelsRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_g7lj6")
+text = "64"
+label_settings = SubResource("LabelSettings_5g3ar")
+horizontal_alignment = 1
+
+[node name="Label8" type="Label" parent="CenterContainer/VBoxContainer/NumberLabelsRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_g7lj6")
+text = "128"
+label_settings = SubResource("LabelSettings_5g3ar")
+horizontal_alignment = 1
+
+[node name="NinePatchRect2" type="NinePatchRect" parent="."]
+modulate = Color(1, 1, 1, 0.760784)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.632
+anchor_top = 0.1
+anchor_right = 0.632
+anchor_bottom = 0.1
+offset_left = 79.936
+offset_top = -40.0
+offset_right = 399.936
+offset_bottom = 224.0
+texture = ExtResource("4_jbu7k")
+patch_margin_left = 30
+patch_margin_top = 30
+patch_margin_right = 30
+patch_margin_bottom = 30
+
+[node name="TileMap5" type="TileMap" parent="."]
+modulate = Color(1, 1, 1, 0.164706)
+position = Vector2(720, 44)
+tile_set = SubResource("TileSet_xu6qo")
+format = 2
+layer_0/tile_data = PackedInt32Array(720902, 0, 0, 786438, 0, 1, 917510, 0, 3, 720903, 65536, 0, 851975, 65536, 2, 917511, 65536, 3, 786440, 131072, 1, 851976, 131072, 2, 917512, 131072, 3, 720905, 196608, 0, 786441, 196608, 1, 851977, 196608, 2, 720906, 0, 0, 786442, 0, 1, 917514, 0, 3, 720907, 65536, 0, 851979, 65536, 2, 917515, 65536, 3, 786444, 131072, 1, 851980, 131072, 2, 917516, 131072, 3, 720909, 196608, 0, 786445, 196608, 1, 851981, 196608, 2, 720910, 0, 0, 786446, 0, 1, 917518, 0, 3, 720911, 65536, 0, 851983, 65536, 2, 917519, 65536, 3, 786448, 131072, 1, 851984, 131072, 2, 917520, 131072, 3, 720913, 196608, 0, 786449, 196608, 1, 851985, 196608, 2, 720914, 0, 0, 786450, 0, 1, 917522, 0, 3, 720915, 65536, 0, 851987, 65536, 2, 917523, 65536, 3, 786452, 131072, 1, 851988, 131072, 2, 917524, 131072, 3, 720917, 196608, 0, 786453, 196608, 1, 851989, 196608, 2, 720918, 0, 0, 786454, 0, 1, 917526, 0, 3, 720919, 65536, 0, 851991, 65536, 2, 917527, 65536, 3, 786456, 131072, 1, 851992, 131072, 2, 917528, 131072, 3, 458774, 0, 0, 524310, 0, 1, 655382, 0, 3, 458775, 65536, 0, 589847, 65536, 2, 655383, 65536, 3, 524312, 131072, 1, 589848, 131072, 2, 655384, 131072, 3, 196630, 0, 0, 262166, 0, 1, 393238, 0, 3, 196631, 65536, 0, 327703, 65536, 2, 393239, 65536, 3, 262168, 131072, 1, 327704, 131072, 2, 393240, 131072, 3, -65514, 0, 0, 22, 0, 1, 131094, 0, 3, -65513, 65536, 0, 65559, 65536, 2, 131095, 65536, 3, 24, 131072, 1, 65560, 131072, 2, 131096, 131072, 3, -65518, 0, 0, 18, 0, 1, 131090, 0, 3, -65517, 65536, 0, 65555, 65536, 2, 131091, 65536, 3, 20, 131072, 1, 65556, 131072, 2, 131092, 131072, 3, -65515, 196608, 0, 21, 196608, 1, 65557, 196608, 2, -65522, 0, 0, 14, 0, 1, 131086, 0, 3, -65521, 65536, 0, 65551, 65536, 2, 131087, 65536, 3, 16, 131072, 1, 65552, 131072, 2, 131088, 131072, 3, -65519, 196608, 0, 17, 196608, 1, 65553, 196608, 2, 196622, 0, 0, 262158, 0, 1, 393230, 0, 3, 196623, 65536, 0, 327695, 65536, 2, 393231, 65536, 3, 262160, 131072, 1, 327696, 131072, 2, 393232, 131072, 3, 196625, 196608, 0, 262161, 196608, 1, 327697, 196608, 2, 196618, 0, 0, 262154, 0, 1, 393226, 0, 3, 196619, 65536, 0, 327691, 65536, 2, 393227, 65536, 3, 262156, 131072, 1, 327692, 131072, 2, 393228, 131072, 3, 196621, 196608, 0, 262157, 196608, 1, 327693, 196608, 2, 196614, 0, 0, 262150, 0, 1, 393222, 0, 3, 196615, 65536, 0, 327687, 65536, 2, 393223, 65536, 3, 262152, 131072, 1, 327688, 131072, 2, 393224, 131072, 3, 196617, 196608, 0, 262153, 196608, 1, 327689, 196608, 2, -65530, 0, 0, 6, 0, 1, 131078, 0, 3, -65529, 65536, 0, 65543, 65536, 2, 131079, 65536, 3, 8, 131072, 1, 65544, 131072, 2, 131080, 131072, 3, -65527, 196608, 0, 9, 196608, 1, 65545, 196608, 2, -65526, 0, 0, 10, 0, 1, 131082, 0, 3, -65525, 65536, 0, 65547, 65536, 2, 131083, 65536, 3, 12, 131072, 1, 65548, 131072, 2, 131084, 131072, 3, -65523, 196608, 0, 13, 196608, 1, 65549, 196608, 2, 458758, 0, 0, 524294, 0, 1, 655366, 0, 3, 458759, 65536, 0, 589831, 65536, 2, 655367, 65536, 3, 524296, 131072, 1, 589832, 131072, 2, 655368, 131072, 3, 458761, 196608, 0, 524297, 196608, 1, 589833, 196608, 2, 458762, 0, 0, 524298, 0, 1, 655370, 0, 3, 458763, 65536, 0, 589835, 65536, 2, 655371, 65536, 3, 524300, 131072, 1, 589836, 131072, 2, 655372, 131072, 3, 458765, 196608, 0, 524301, 196608, 1, 589837, 196608, 2, 458766, 0, 0, 524302, 0, 1, 655374, 0, 3, 458767, 65536, 0, 589839, 65536, 2, 655375, 65536, 3, 524304, 131072, 1, 589840, 131072, 2, 655376, 131072, 3, 458769, 196608, 0, 524305, 196608, 1, 589841, 196608, 2, 458770, 0, 0, 524306, 0, 1, 655378, 0, 3, 458771, 65536, 0, 589843, 65536, 2, 655379, 65536, 3, 524308, 131072, 1, 589844, 131072, 2, 655380, 131072, 3, 458773, 196608, 0, 524309, 196608, 1, 589845, 196608, 2, 196626, 0, 0, 262162, 0, 1, 393234, 0, 3, 196627, 65536, 0, 327699, 65536, 2, 393235, 65536, 3, 262164, 131072, 1, 327700, 131072, 2, 393236, 131072, 3, 196629, 196608, 0, 262165, 196608, 1, 327701, 196608, 2)
+
+[node name="NinePatchRect4" type="NinePatchRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.632
+anchor_top = 0.1
+anchor_right = 0.632
+anchor_bottom = 0.1
+offset_left = 79.936
+offset_top = 152.0
+offset_right = 399.936
+offset_bottom = 224.0
+texture = ExtResource("5_1mh00")
+patch_margin_left = 30
+patch_margin_top = 30
+patch_margin_right = 30
+patch_margin_bottom = 30
+
+[node name="JetReference" parent="." instance=ExtResource("10_xajag")]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+offset_left = 876.0
+offset_top = 29.0
+offset_right = 1076.0
+offset_bottom = 229.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+offset_left = 808.0
+offset_top = 216.0
+offset_right = 1128.0
+offset_bottom = 288.0
+size_flags_horizontal = 4
+text = "Součástka: tryska"
+label_settings = SubResource("LabelSettings_bps2t")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="NinePatchRect9" type="NinePatchRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.701
+anchor_top = 0.475
+anchor_right = 0.979
+anchor_bottom = 0.95
+offset_left = 0.447937
+offset_right = 0.192017
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_cw33j")
+patch_margin_left = 30
+patch_margin_top = 30
+patch_margin_right = 30
+patch_margin_bottom = 30
+
+[node name="MarginContainer" type="MarginContainer" parent="NinePatchRect9"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 25
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 25
+
+[node name="Label" type="Label" parent="NinePatchRect9/MarginContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_vertical = 1
+text = "Cíl:
+Sestrojit kód pomocí správné kombinace zvolených tlačítek.
+
+Ovládání:
+Myš: zapnutí nebo vypnutí tlačítka, potvrzení kódu"
+label_settings = SubResource("LabelSettings_rr3wg")
+autowrap_mode = 2
+
+[node name="SubmitButton" type="Button" parent="."]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(100, 40)
+layout_mode = 0
+offset_left = 344.0
+offset_top = 504.0
+offset_right = 504.0
+offset_bottom = 561.0
+focus_mode = 0
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_cnjvg")
+theme_override_styles/hover = SubResource("StyleBoxFlat_dnxk7")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_lo5k7")
+text = "Potvrdit"
+
+[node name="MasterPopup" parent="." instance=ExtResource("8_3rsox")]
+visible = false
+layout_mode = 1

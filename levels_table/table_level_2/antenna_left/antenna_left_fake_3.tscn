@@ -1,0 +1,98 @@
+[gd_scene load_steps=4 format=3 uid="uid://bj12ens8dwr0l"]
+
+[ext_resource type="Texture2D" uid="uid://lfd4bbdlkp6e" path="res://Shapes/Rectangle_Radius.png" id="1_n6kn0"]
+[ext_resource type="Texture2D" uid="uid://cvcl8o6yphooo" path="res://Shapes/Circle.png" id="2_qi6jm"]
+[ext_resource type="Texture2D" uid="uid://bx6kgnpy443ug" path="res://Shapes/Kuzel.png" id="3_xfp55"]
+
+[node name="Control" type="Control"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1052.0
+offset_bottom = -540.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(50, 50)
+
+[node name="Rotator" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 100.0
+offset_bottom = 100.0
+pivot_offset = Vector2(50, 50)
+
+[node name="RectangleRadius" type="TextureRect" parent="Rotator"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -34.0
+offset_top = -2.0
+offset_right = 22.0
+offset_bottom = 54.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_n6kn0")
+expand_mode = 1
+
+[node name="Elipse" type="TextureRect" parent="Rotator"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = 32.6718
+offset_top = -8.0
+offset_right = 112.672
+offset_bottom = 72.0
+rotation = 0.785398
+scale = Vector2(1, 0.43614)
+texture = ExtResource("2_qi6jm")
+expand_mode = 1
+
+[node name="Elipse2" type="TextureRect" parent="Rotator"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = 40.0
+offset_right = 97.0
+offset_bottom = 57.0
+rotation = 0.785398
+scale = Vector2(1, 0.43614)
+texture = ExtResource("2_qi6jm")
+expand_mode = 1
+
+[node name="Kuzel" type="TextureRect" parent="Rotator"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -34.0
+offset_top = 30.0
+offset_right = -10.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_xfp55")
+expand_mode = 1
+
+[node name="Kuzel2" type="TextureRect" parent="Rotator"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -2.0
+offset_top = 30.0
+offset_right = 22.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_xfp55")
+expand_mode = 1

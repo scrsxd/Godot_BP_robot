@@ -1,0 +1,119 @@
+[gd_scene load_steps=6 format=3 uid="uid://5jdny2uloy8k"]
+
+[ext_resource type="Texture2D" uid="uid://bx6kgnpy443ug" path="res://Shapes/Kuzel.png" id="1_ijj3n"]
+[ext_resource type="Texture2D" uid="uid://lfd4bbdlkp6e" path="res://Shapes/Rectangle_Radius.png" id="2_6ln3g"]
+[ext_resource type="Texture2D" uid="uid://chm2gcsvvrc6y" path="res://Shapes/Rectangle_Vert.png" id="3_iud6n"]
+[ext_resource type="Texture2D" uid="uid://cvcl8o6yphooo" path="res://Shapes/Circle.png" id="4_jfdaq"]
+[ext_resource type="Texture2D" uid="uid://cjivcxsnpcmi1" path="res://Shapes/Rectangle_Thin.png" id="5_uc1m6"]
+
+[node name="Control" type="SubViewport"]
+transparent_bg = true
+size = Vector2i(200, 200)
+render_target_update_mode = 1
+
+[node name="Node2D" type="Node2D" parent="."]
+scale = Vector2(2, 2)
+
+[node name="Kuzel" type="TextureRect" parent="Node2D"]
+modulate = Color(0.6, 0.615686, 0.0941176, 1)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 8.67182
+offset_top = 76.0
+offset_right = 80.6718
+offset_bottom = 96.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_ijj3n")
+expand_mode = 1
+
+[node name="RectangleRadius" type="TextureRect" parent="Node2D"]
+modulate = Color(0.447059, 0.52549, 0, 1)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 24.6718
+offset_top = 42.0
+offset_right = 64.6718
+offset_bottom = 98.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_6ln3g")
+expand_mode = 1
+
+[node name="RectangleVert" type="TextureRect" parent="Node2D"]
+modulate = Color(0, 0.466667, 0.929412, 1)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 32.6718
+offset_top = 20.0
+offset_right = 48.6718
+offset_bottom = 60.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_iud6n")
+expand_mode = 1
+
+[node name="Elipse" type="TextureRect" parent="Node2D"]
+modulate = Color(0, 0.388235, 0.878431, 1)
+offset_left = 32.6718
+offset_top = -12.0
+offset_right = 112.672
+offset_bottom = 68.0
+rotation = 0.785398
+scale = Vector2(1, 0.43614)
+texture = ExtResource("4_jfdaq")
+expand_mode = 1
+
+[node name="Elipse2" type="TextureRect" parent="Node2D"]
+modulate = Color(0, 0.223529, 0.529412, 1)
+offset_left = 40.0
+offset_top = -4.0
+offset_right = 97.0
+offset_bottom = 53.0
+rotation = 0.785398
+scale = Vector2(1, 0.43614)
+texture = ExtResource("4_jfdaq")
+expand_mode = 1
+
+[node name="RectangleThin" type="TextureRect" parent="Node2D"]
+modulate = Color(0.388235, 0.388235, 0.388235, 1)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 40.6718
+offset_top = 20.0
+offset_right = 68.6718
+offset_bottom = 44.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -0.785398
+texture = ExtResource("5_uc1m6")
+expand_mode = 1
+
+[node name="HalfCircle" type="TextureRect" parent="Node2D"]
+modulate = Color(0.792157, 0, 0.211765, 1)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 64.6718
+offset_top = 4.0
+offset_right = 75.6718
+offset_bottom = 15.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -0.137881
+texture = ExtResource("4_jfdaq")
+expand_mode = 1

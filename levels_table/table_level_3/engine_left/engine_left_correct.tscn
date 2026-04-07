@@ -1,0 +1,197 @@
+[gd_scene load_steps=5 format=3 uid="uid://bcabp47weygug"]
+
+[ext_resource type="Texture2D" uid="uid://cjivcxsnpcmi1" path="res://Shapes/Rectangle_Thin.png" id="1_oi5e7"]
+[ext_resource type="Texture2D" uid="uid://di2fj6fslqgww" path="res://Shapes/Triangle.png" id="2_4agii"]
+[ext_resource type="Texture2D" uid="uid://cvcl8o6yphooo" path="res://Shapes/Circle.png" id="5_64bxj"]
+[ext_resource type="Texture2D" uid="uid://cajttv2pkjn5d" path="res://Shapes/WiFi.png" id="6_0k154"]
+
+[node name="EngineReference" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_top = -1.0
+offset_right = 100.0
+offset_bottom = 99.0
+pivot_offset = Vector2(50, 50)
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="Rotator" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 100.0
+offset_bottom = 100.0
+pivot_offset = Vector2(50, 50)
+
+[node name="RectangleThin" type="TextureRect" parent="Rotator"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = 11.0
+offset_top = 33.0
+offset_right = 83.0
+offset_bottom = 105.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_oi5e7")
+expand_mode = 1
+
+[node name="Triangle" type="TextureRect" parent="Rotator/RectangleThin"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+offset_left = 2.0
+offset_top = 44.0
+offset_right = 17.0
+offset_bottom = 60.0
+rotation = 3.14159
+texture = ExtResource("2_4agii")
+expand_mode = 1
+
+[node name="RectangleThin4" type="TextureRect" parent="Rotator"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = 54.0
+offset_top = 34.0
+offset_right = 90.0
+offset_bottom = 106.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_oi5e7")
+expand_mode = 1
+
+[node name="RectangleThin2" type="TextureRect" parent="Rotator"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = 55.0
+offset_top = 9.0
+offset_right = 137.0
+offset_bottom = 81.0
+rotation = 1.5708
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_oi5e7")
+expand_mode = 1
+
+[node name="Triangle" type="TextureRect" parent="Rotator/RectangleThin2"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+offset_left = 2.0
+offset_top = 44.0
+offset_right = 17.0
+offset_bottom = 60.0
+rotation = 3.14159
+texture = ExtResource("2_4agii")
+expand_mode = 1
+
+[node name="RectangleThin11" type="TextureRect" parent="Rotator"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = 37.0
+offset_top = 50.0
+offset_right = 57.0
+offset_bottom = 76.0
+rotation = -2.35619
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_oi5e7")
+expand_mode = 1
+
+[node name="RectangleThin12" type="TextureRect" parent="Rotator"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = 52.0
+offset_top = 40.0
+offset_right = 70.0
+offset_bottom = 66.0
+rotation = -0.785398
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_oi5e7")
+expand_mode = 1
+
+[node name="RectangleThin13" type="TextureRect" parent="Rotator"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = 61.0
+offset_top = 53.0
+offset_right = 81.0
+offset_bottom = 79.0
+rotation = 0.785398
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_oi5e7")
+expand_mode = 1
+
+[node name="RectangleThin14" type="TextureRect" parent="Rotator"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = 46.0
+offset_top = 62.0
+offset_right = 67.0
+offset_bottom = 88.0
+rotation = 2.35619
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_oi5e7")
+expand_mode = 1
+
+[node name="Circle1" type="TextureRect" parent="Rotator"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = 32.0
+offset_top = 41.0
+offset_right = 46.0
+offset_bottom = 56.0
+rotation = 3.92699
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("5_64bxj")
+expand_mode = 1
+
+[node name="Circle2" type="TextureRect" parent="Rotator"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = 38.0
+offset_top = 67.0
+offset_right = 52.0
+offset_bottom = 82.0
+rotation = 2.35619
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("5_64bxj")
+expand_mode = 1
+
+[node name="Circle3" type="TextureRect" parent="Rotator"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = 65.0
+offset_top = 62.0
+offset_right = 79.0
+offset_bottom = 77.0
+rotation = 0.785398
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("5_64bxj")
+expand_mode = 1
+
+[node name="Circle4" type="TextureRect" parent="Rotator"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = 60.0
+offset_top = 36.0
+offset_right = 74.0
+offset_bottom = 51.0
+rotation = -0.785398
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("5_64bxj")
+expand_mode = 1
+
+[node name="Circle" type="TextureRect" parent="Rotator"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+offset_left = 37.0
+offset_top = 38.0
+offset_right = 85.0
+offset_bottom = 88.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("5_64bxj")
+expand_mode = 1
+
+[node name="WifiSymbol" type="TextureRect" parent="Rotator"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = 39.0
+offset_top = 40.0
+offset_right = 79.0
+offset_bottom = 82.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_0k154")
+expand_mode = 1

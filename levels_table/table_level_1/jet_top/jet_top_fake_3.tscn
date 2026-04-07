@@ -1,0 +1,56 @@
+[gd_scene load_steps=3 format=3 uid="uid://vihvasn27hxn"]
+
+[ext_resource type="Texture2D" uid="uid://cjivcxsnpcmi1" path="res://Shapes/Rectangle_Thin.png" id="1_rbt5f"]
+[ext_resource type="Texture2D" uid="uid://chm2gcsvvrc6y" path="res://Shapes/Rectangle_Vert.png" id="4_c6vx1"]
+
+[node name="JetReference" type="Control"]
+modulate = Color(0, 0, 0, 1)
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 100.0
+offset_bottom = 100.0
+pivot_offset = Vector2(50, 50)
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="Rotator" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 100.0
+offset_bottom = 100.0
+pivot_offset = Vector2(50, 50)
+
+[node name="RectangleThin" type="TextureRect" parent="Rotator"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -15.0
+offset_top = -16.0
+offset_right = 16.0
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_rbt5f")
+expand_mode = 1
+
+[node name="RectangleVert" type="TextureRect" parent="Rotator"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -23.5
+offset_top = -46.895
+offset_right = 23.5
+offset_bottom = 17.105
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_c6vx1")
+expand_mode = 1

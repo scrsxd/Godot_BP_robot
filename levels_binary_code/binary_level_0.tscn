@@ -1,0 +1,86 @@
+[gd_scene load_steps=7 format=3 uid="uid://decgl7bhm3kgq"]
+
+[ext_resource type="PackedScene" uid="uid://c068ld5fbppta" path="res://levels_binary_code/binary_game.tscn" id="1_6w34u"]
+[ext_resource type="Texture2D" uid="uid://dpwf62x1ursio" path="res://levels_grid/Robot_Pixelart.png" id="2_0arqt"]
+[ext_resource type="PackedScene" uid="uid://crao0ji0oxuhs" path="res://Scenes/crash_scene1.tscn" id="2_hjaoj"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_jntcj"]
+font_size = 30
+
+[sub_resource type="LabelSettings" id="LabelSettings_3siqu"]
+font_size = 20
+
+[sub_resource type="LabelSettings" id="LabelSettings_vkp3m"]
+font_size = 20
+
+[node name="BinaryGame" instance=ExtResource("1_6w34u")]
+bottom_target_number = 35
+top_target_number = 63
+next_level_scene = ExtResource("2_hjaoj")
+intro_title = "Odemknutí lodě"
+intro_desc = "Pomoz P.3.P.0.vi sestavit správný nouzový kód pomocí číselných tlačítek."
+
+[node name="Label55" parent="." index="8"]
+text = "Nouzové odemčení systému"
+
+[node name="TargetLabel" parent="CenterContainer/VBoxContainer" index="0"]
+label_settings = SubResource("LabelSettings_jntcj")
+
+[node name="CurrentLabel" parent="CenterContainer/VBoxContainer" index="1"]
+label_settings = SubResource("LabelSettings_3siqu")
+
+[node name="Label" parent="CenterContainer/VBoxContainer/NumberLabelsRow" index="0"]
+label_settings = SubResource("LabelSettings_vkp3m")
+
+[node name="Label2" parent="CenterContainer/VBoxContainer/NumberLabelsRow" index="1"]
+label_settings = SubResource("LabelSettings_vkp3m")
+
+[node name="Label3" parent="CenterContainer/VBoxContainer/NumberLabelsRow" index="2"]
+label_settings = SubResource("LabelSettings_vkp3m")
+
+[node name="Label4" parent="CenterContainer/VBoxContainer/NumberLabelsRow" index="3"]
+label_settings = SubResource("LabelSettings_vkp3m")
+
+[node name="Label5" parent="CenterContainer/VBoxContainer/NumberLabelsRow" index="4"]
+label_settings = SubResource("LabelSettings_vkp3m")
+
+[node name="Label6" parent="CenterContainer/VBoxContainer/NumberLabelsRow" index="5"]
+label_settings = SubResource("LabelSettings_vkp3m")
+
+[node name="Label7" parent="CenterContainer/VBoxContainer/NumberLabelsRow" index="6"]
+label_settings = SubResource("LabelSettings_vkp3m")
+
+[node name="Label8" parent="CenterContainer/VBoxContainer/NumberLabelsRow" index="7"]
+label_settings = SubResource("LabelSettings_vkp3m")
+
+[node name="NinePatchRect2" parent="." index="10"]
+visible = false
+
+[node name="TileMap5" parent="." index="11"]
+visible = false
+position = Vector2(720, 47)
+
+[node name="NinePatchRect4" parent="." index="12"]
+visible = false
+
+[node name="JetReference" parent="." index="13"]
+visible = false
+offset_left = 1160.0
+offset_top = 24.0
+offset_right = 1360.0
+offset_bottom = 224.0
+
+[node name="Label" parent="." index="14"]
+visible = false
+text = "Zámek systému lodi"
+
+[node name="NinePatchRect9" parent="." index="15"]
+anchor_top = 0.275
+anchor_bottom = 0.75
+offset_bottom = -3.05176e-05
+
+[node name="RobotPixelart" type="Sprite2D" parent="." index="16"]
+visible = false
+position = Vector2(968, 112)
+scale = Vector2(1.9375, 1.9375)
+texture = ExtResource("2_0arqt")

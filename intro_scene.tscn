@@ -1,0 +1,687 @@
+[gd_scene load_steps=27 format=3 uid="uid://dmouupacsj13c"]
+
+[ext_resource type="Script" path="res://Scenes/intro_scene.gd" id="1_nsx6s"]
+[ext_resource type="PackedScene" uid="uid://dybamcsie05qn" path="res://Scenes/crash_scene.tscn" id="2_ah0cq"]
+[ext_resource type="Texture2D" uid="uid://el2b73inb0tw" path="res://Scenes/BG_IMGS/Nature Landscapes Free Pixel Art/nature_4/2.png" id="3_sb8c5"]
+[ext_resource type="Texture2D" uid="uid://2xsxdsed850u" path="res://Scenes/BG_IMGS/Nature Landscapes Free Pixel Art/nature_3/1.png" id="3_wxsar"]
+[ext_resource type="Texture2D" uid="uid://duo01jfkvvuxi" path="res://Scenes/BG_IMGS/Nature Landscapes Free Pixel Art/nature_4/3.png" id="4_04geq"]
+[ext_resource type="Texture2D" uid="uid://duwkvj1ruain2" path="res://Scenes/BG_IMGS/Nature Landscapes Free Pixel Art/nature_4/4.png" id="5_8fkct"]
+[ext_resource type="StyleBox" uid="uid://7u6sm25uko3q" path="res://Scenes/black_button.tres" id="6_x6hv1"]
+[ext_resource type="StyleBox" uid="uid://d1bv8m12tsodj" path="res://Scenes/white_button.tres" id="7_7uqpk"]
+[ext_resource type="Texture2D" uid="uid://bp18mlqnr5dqw" path="res://Scenes/ROBOT_IMGS/ROBOT_RAKETA.png" id="7_bkkj7"]
+[ext_resource type="Texture2D" uid="uid://dn4ex5t3ej2c6" path="res://Scenes/ROBOT_IMGS/ROBOT_RAKETA_OHEN.png" id="8_tjjcx"]
+[ext_resource type="Texture2D" uid="uid://bx6kgnpy443ug" path="res://Shapes/Kuzel.png" id="11_pco8w"]
+[ext_resource type="Texture2D" uid="uid://cjivcxsnpcmi1" path="res://Shapes/Rectangle_Thin.png" id="12_7a2jj"]
+[ext_resource type="Texture2D" uid="uid://chm2gcsvvrc6y" path="res://Shapes/Rectangle_Vert.png" id="13_us7rj"]
+[ext_resource type="Texture2D" uid="uid://c0jds7plmlmf4" path="res://Shapes/Half_Circle.png" id="14_yex8k"]
+[ext_resource type="Texture2D" uid="uid://lfd4bbdlkp6e" path="res://Shapes/Rectangle_Radius.png" id="15_r0po4"]
+[ext_resource type="Texture2D" uid="uid://cvcl8o6yphooo" path="res://Shapes/Circle.png" id="16_8ygul"]
+[ext_resource type="Texture2D" uid="uid://di2fj6fslqgww" path="res://Shapes/Triangle.png" id="17_ks4q7"]
+[ext_resource type="Texture2D" uid="uid://cgqbtof8cx8cd" path="res://panel_grey_bolts.png" id="17_v4phl"]
+[ext_resource type="Texture2D" uid="uid://cajttv2pkjn5d" path="res://Shapes/WiFi.png" id="18_xy550"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aku76"]
+atlas = ExtResource("8_tjjcx")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tyhgf"]
+atlas = ExtResource("8_tjjcx")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3qvc5"]
+atlas = ExtResource("8_tjjcx")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tfi7o"]
+atlas = ExtResource("8_tjjcx")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_h2md6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aku76")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tyhgf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3qvc5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tfi7o")
+}],
+"loop": true,
+"name": &"default",
+"speed": 7.5
+}]
+
+[sub_resource type="LabelSettings" id="LabelSettings_kq5od"]
+font_size = 25
+font_color = Color(1, 0, 0, 1)
+outline_size = 1
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_nkmn1"]
+font_size = 22
+outline_size = 3
+outline_color = Color(0, 0, 0, 1)
+
+[node name="StoryScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_nsx6s")
+next_scene = ExtResource("2_ah0cq")
+scroll_speed = -250.0
+typewriter_speed = 0.024
+dialogue_texts = Array[String](["Robot P.3.P.4. v klidu poletoval nad Zemí a shromažďoval informace o místní přírodě. K této misi mu sloužila jeho věrná vesmírná loď jménem K.4.P.R.", "Najednou se ale v podpalubí uvolnilo několik důležitých šroubků. Systém lodi okamžitě vyhlásil poplach a zablokoval veškeré ovládání!", "Než se P.3.P.4. stačil vůbec vzpamatovat, neovladatelný K.4.P.R. zkolaboval a padal přímo dolů!"])
+error_trigger_index = 2
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(42, 28)
+motion_scale = Vector2(0.2, 0.2)
+motion_mirroring = Vector2(1152, 640)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+texture_filter = 1
+texture_repeat = 2
+position = Vector2(534, 294)
+scale = Vector2(2, 1.981)
+texture = ExtResource("3_wxsar")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.4, 0.4)
+motion_mirroring = Vector2(1152, 640)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+texture_filter = 1
+texture_repeat = 2
+position = Vector2(576, 322)
+scale = Vector2(2, 1.981)
+texture = ExtResource("3_sb8c5")
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.6, 0.6)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3"]
+texture_filter = 1
+texture_repeat = 2
+position = Vector2(576, 322)
+scale = Vector2(2, 1.981)
+texture = ExtResource("4_04geq")
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.8, 0.8)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer4"]
+texture_filter = 1
+texture_repeat = 2
+position = Vector2(576, 322)
+scale = Vector2(2, 1.981)
+texture = ExtResource("5_8fkct")
+
+[node name="RobotRaketa" type="Sprite2D" parent="."]
+position = Vector2(869.375, 122.688)
+scale = Vector2(1.58301, 1.58301)
+texture = ExtResource("7_bkkj7")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="RobotRaketa"]
+show_behind_parent = true
+position = Vector2(120.53, 7.53656)
+scale = Vector2(1.35345, 1.35345)
+sprite_frames = SubResource("SpriteFrames_h2md6")
+frame_progress = 0.0820934
+
+[node name="FadeOutRect" type="ColorRect" parent="."]
+visible = false
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="ErrorLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 456.0
+offset_top = 136.0
+offset_right = 707.0
+offset_bottom = 171.0
+rotation = -0.251327
+text = "Systém zablokován !!!"
+label_settings = SubResource("LabelSettings_kq5od")
+
+[node name="ErrorLabel" type="Label" parent="ErrorLabel"]
+layout_mode = 0
+offset_left = 559.0
+offset_top = 234.0
+offset_right = 647.0
+offset_bottom = 269.0
+rotation = 0.534071
+text = "ERROR"
+label_settings = SubResource("LabelSettings_kq5od")
+
+[node name="Part1" type="Sprite2D" parent="."]
+visible = false
+
+[node name="Node2D" type="Node2D" parent="Part1"]
+position = Vector2(-100, -100)
+scale = Vector2(2, 2)
+
+[node name="Kuzel" type="TextureRect" parent="Part1/Node2D"]
+modulate = Color(0, 0, 0, 1)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 39.0
+offset_top = 40.63
+offset_right = 61.0
+offset_bottom = 96.63
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("11_pco8w")
+expand_mode = 1
+
+[node name="RectangleThin" type="TextureRect" parent="Part1/Node2D"]
+modulate = Color(0.388235, 0.388235, 0.388235, 1)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 35.0
+offset_top = 33.985
+offset_right = 65.0
+offset_bottom = 113.985
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("12_7a2jj")
+expand_mode = 1
+
+[node name="RectangleVert" type="TextureRect" parent="Part1/Node2D"]
+modulate = Color(0, 0.466667, 0.929412, 1)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 26.5
+offset_top = 3.105
+offset_right = 73.5
+offset_bottom = 67.105
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("13_us7rj")
+expand_mode = 1
+
+[node name="HalfCircle" type="TextureRect" parent="Part1/Node2D"]
+modulate = Color(0, 0.388235, 0.878431, 1)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 10.0
+offset_top = 30.885
+offset_right = 90.0
+offset_bottom = 110.885
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("14_yex8k")
+expand_mode = 1
+
+[node name="Part2" type="Sprite2D" parent="."]
+visible = false
+
+[node name="Node2D" type="Node2D" parent="Part2"]
+position = Vector2(-100, -100)
+scale = Vector2(2, 2)
+
+[node name="Kuzel" type="TextureRect" parent="Part2/Node2D"]
+modulate = Color(0.6, 0.615686, 0.0941176, 1)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 8.67182
+offset_top = 76.0
+offset_right = 80.6718
+offset_bottom = 96.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("11_pco8w")
+expand_mode = 1
+
+[node name="RectangleRadius" type="TextureRect" parent="Part2/Node2D"]
+modulate = Color(0.447059, 0.52549, 0, 1)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 24.6718
+offset_top = 42.0
+offset_right = 64.6718
+offset_bottom = 98.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("15_r0po4")
+expand_mode = 1
+
+[node name="RectangleVert" type="TextureRect" parent="Part2/Node2D"]
+modulate = Color(0, 0.466667, 0.929412, 1)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 32.6718
+offset_top = 20.0
+offset_right = 48.6718
+offset_bottom = 60.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("13_us7rj")
+expand_mode = 1
+
+[node name="Elipse" type="TextureRect" parent="Part2/Node2D"]
+modulate = Color(0, 0.388235, 0.878431, 1)
+offset_left = 32.6718
+offset_top = -12.0
+offset_right = 112.672
+offset_bottom = 68.0
+rotation = 0.785398
+scale = Vector2(1, 0.43614)
+texture = ExtResource("16_8ygul")
+expand_mode = 1
+
+[node name="Elipse2" type="TextureRect" parent="Part2/Node2D"]
+modulate = Color(0, 0.223529, 0.529412, 1)
+offset_left = 40.0
+offset_top = -4.0
+offset_right = 97.0
+offset_bottom = 53.0
+rotation = 0.785398
+scale = Vector2(1, 0.43614)
+texture = ExtResource("16_8ygul")
+expand_mode = 1
+
+[node name="RectangleThin" type="TextureRect" parent="Part2/Node2D"]
+modulate = Color(0.388235, 0.388235, 0.388235, 1)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 40.6718
+offset_top = 20.0
+offset_right = 68.6718
+offset_bottom = 44.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -0.785398
+texture = ExtResource("12_7a2jj")
+expand_mode = 1
+
+[node name="HalfCircle" type="TextureRect" parent="Part2/Node2D"]
+modulate = Color(0.792157, 0, 0.211765, 1)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 64.6718
+offset_top = 4.0
+offset_right = 75.6718
+offset_bottom = 15.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -0.137881
+texture = ExtResource("16_8ygul")
+expand_mode = 1
+
+[node name="Part3" type="Sprite2D" parent="."]
+visible = false
+
+[node name="Node2D" type="Node2D" parent="Part3"]
+position = Vector2(-100, -100)
+scale = Vector2(2.1, 2.1)
+
+[node name="RectangleThin" type="TextureRect" parent="Part3/Node2D"]
+modulate = Color(0.388235, 0.388235, 0.388235, 1)
+offset_left = 11.0
+offset_top = 33.0
+offset_right = 83.0
+offset_bottom = 105.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("12_7a2jj")
+expand_mode = 1
+
+[node name="Triangle" type="TextureRect" parent="Part3/Node2D/RectangleThin"]
+modulate = Color(0.545098, 0.545098, 0.545098, 1)
+layout_mode = 1
+offset_left = 2.0
+offset_top = 44.0
+offset_right = 17.0
+offset_bottom = 60.0
+rotation = 3.14159
+texture = ExtResource("17_ks4q7")
+expand_mode = 1
+
+[node name="RectangleThin4" type="TextureRect" parent="Part3/Node2D"]
+modulate = Color(0.388235, 0.388235, 0.388235, 1)
+offset_left = 54.0
+offset_top = 34.0
+offset_right = 126.0
+offset_bottom = 106.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("12_7a2jj")
+expand_mode = 1
+
+[node name="RectangleThin5" type="TextureRect" parent="Part3/Node2D"]
+modulate = Color(0.105882, 0.105882, 0.105882, 1)
+offset_left = 73.0
+offset_top = 62.0
+offset_right = 110.0
+offset_bottom = 134.0
+rotation = -1.5708
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("12_7a2jj")
+expand_mode = 1
+
+[node name="Triangle5" type="TextureRect" parent="Part3/Node2D"]
+modulate = Color(0.545098, 0.545098, 0.545098, 1)
+offset_left = 54.0
+offset_top = 83.0
+offset_right = 68.0
+offset_bottom = 98.0
+rotation = 1.5708
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("17_ks4q7")
+expand_mode = 1
+
+[node name="RectangleThin6" type="TextureRect" parent="Part3/Node2D"]
+modulate = Color(0.105882, 0.105882, 0.105882, 1)
+offset_left = 60.0
+offset_top = 99.0
+offset_right = 99.0
+offset_bottom = 171.0
+rotation = -3.14159
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("12_7a2jj")
+expand_mode = 1
+
+[node name="RectangleThin7" type="TextureRect" parent="Part3/Node2D"]
+modulate = Color(0.105882, 0.105882, 0.105882, 1)
+offset_left = 32.0
+offset_top = 79.0
+offset_right = 69.0
+offset_bottom = 151.0
+rotation = -1.5708
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("12_7a2jj")
+expand_mode = 1
+
+[node name="RectangleThin2" type="TextureRect" parent="Part3/Node2D"]
+modulate = Color(0.388235, 0.388235, 0.388235, 1)
+offset_left = 55.0
+offset_top = 9.0
+offset_right = 127.0
+offset_bottom = 81.0
+rotation = 1.5708
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("12_7a2jj")
+expand_mode = 1
+
+[node name="Triangle" type="TextureRect" parent="Part3/Node2D/RectangleThin2"]
+modulate = Color(0.545098, 0.545098, 0.545098, 1)
+layout_mode = 1
+offset_left = 2.0
+offset_top = 44.0
+offset_right = 17.0
+offset_bottom = 60.0
+rotation = 3.14159
+texture = ExtResource("17_ks4q7")
+expand_mode = 1
+
+[node name="RectangleThin3" type="TextureRect" parent="Part3/Node2D"]
+modulate = Color(0.388235, 0.388235, 0.388235, 1)
+offset_left = 78.0
+offset_top = 9.0
+offset_right = 150.0
+offset_bottom = 81.0
+rotation = 1.5708
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("12_7a2jj")
+expand_mode = 1
+
+[node name="Triangle" type="TextureRect" parent="Part3/Node2D/RectangleThin3"]
+modulate = Color(0.545098, 0.545098, 0.545098, 1)
+layout_mode = 1
+offset_left = 2.0
+offset_top = 44.0
+offset_right = 17.0
+offset_bottom = 60.0
+rotation = 3.14159
+texture = ExtResource("17_ks4q7")
+expand_mode = 1
+
+[node name="Kuzel" type="TextureRect" parent="Part3/Node2D"]
+modulate = Color(0.105882, 0.105882, 0.105882, 1)
+offset_left = 35.0
+offset_top = 16.0
+offset_right = 91.0
+offset_bottom = 52.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("11_pco8w")
+expand_mode = 1
+
+[node name="RectangleRadius" type="TextureRect" parent="Part3/Node2D"]
+modulate = Color(0.403922, 0.403922, 0.403922, 1)
+offset_left = 24.0
+offset_top = 28.0
+offset_right = 124.0
+offset_bottom = 158.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("15_r0po4")
+expand_mode = 1
+
+[node name="RectangleRadius2" type="TextureRect" parent="Part3/Node2D"]
+modulate = Color(0.403922, 0.403922, 0.403922, 1)
+offset_left = 24.0
+offset_top = 11.0
+offset_right = 124.0
+offset_bottom = 141.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("15_r0po4")
+expand_mode = 1
+
+[node name="RectangleThin11" type="TextureRect" parent="Part3/Node2D"]
+modulate = Color(0.105882, 0.105882, 0.105882, 1)
+offset_left = 37.0
+offset_top = 50.0
+offset_right = 57.0
+offset_bottom = 76.0
+rotation = -2.35619
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("12_7a2jj")
+expand_mode = 1
+
+[node name="RectangleThin12" type="TextureRect" parent="Part3/Node2D"]
+modulate = Color(0.105882, 0.105882, 0.105882, 1)
+offset_left = 52.0
+offset_top = 40.0
+offset_right = 70.0
+offset_bottom = 66.0
+rotation = -0.785398
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("12_7a2jj")
+expand_mode = 1
+
+[node name="RectangleThin13" type="TextureRect" parent="Part3/Node2D"]
+modulate = Color(0.105882, 0.105882, 0.105882, 1)
+offset_left = 61.0
+offset_top = 53.0
+offset_right = 81.0
+offset_bottom = 79.0
+rotation = 0.785398
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("12_7a2jj")
+expand_mode = 1
+
+[node name="RectangleThin14" type="TextureRect" parent="Part3/Node2D"]
+modulate = Color(0.105882, 0.105882, 0.105882, 1)
+offset_left = 46.0
+offset_top = 62.0
+offset_right = 67.0
+offset_bottom = 88.0
+rotation = 2.35619
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("12_7a2jj")
+expand_mode = 1
+
+[node name="Circle1" type="TextureRect" parent="Part3/Node2D"]
+modulate = Color(0.545098, 0.545098, 0.545098, 1)
+offset_left = 32.0
+offset_top = 41.0
+offset_right = 46.0
+offset_bottom = 56.0
+rotation = 3.92699
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("16_8ygul")
+expand_mode = 1
+
+[node name="Circle2" type="TextureRect" parent="Part3/Node2D"]
+modulate = Color(0.545098, 0.545098, 0.545098, 1)
+offset_left = 38.0
+offset_top = 67.0
+offset_right = 52.0
+offset_bottom = 82.0
+rotation = 2.35619
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("16_8ygul")
+expand_mode = 1
+
+[node name="Circle3" type="TextureRect" parent="Part3/Node2D"]
+modulate = Color(0.545098, 0.545098, 0.545098, 1)
+offset_left = 65.0
+offset_top = 62.0
+offset_right = 79.0
+offset_bottom = 77.0
+rotation = 0.785398
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("16_8ygul")
+expand_mode = 1
+
+[node name="Circle4" type="TextureRect" parent="Part3/Node2D"]
+modulate = Color(0.545098, 0.545098, 0.545098, 1)
+offset_left = 60.0
+offset_top = 36.0
+offset_right = 74.0
+offset_bottom = 51.0
+rotation = -0.785398
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("16_8ygul")
+expand_mode = 1
+
+[node name="Circle" type="TextureRect" parent="Part3/Node2D"]
+offset_left = 37.0
+offset_top = 38.0
+offset_right = 85.0
+offset_bottom = 88.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("16_8ygul")
+expand_mode = 1
+
+[node name="WifiSymbol" type="TextureRect" parent="Part3/Node2D"]
+modulate = Color(0, 0, 0, 1)
+offset_left = 39.0
+offset_top = 40.0
+offset_right = 79.0
+offset_bottom = 82.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("18_xy550")
+expand_mode = 1
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+modulate = Color(0.937255, 0.627451, 0, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 528.0
+offset_top = 376.0
+offset_right = -48.0
+offset_bottom = -104.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("17_v4phl")
+patch_margin_left = 30
+patch_margin_top = 30
+patch_margin_right = 30
+patch_margin_bottom = 30
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+modulate = Color(0.537255, 0.466667, 0.278431, 0.670588)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 552.0
+offset_top = 400.0
+offset_right = -48.0
+offset_bottom = -128.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NextButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 408.0
+offset_top = -128.0
+offset_right = 555.0
+offset_bottom = -78.0
+grow_horizontal = 2
+grow_vertical = 0
+focus_mode = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = ExtResource("6_x6hv1")
+theme_override_styles/hover = ExtResource("7_7uqpk")
+theme_override_styles/pressed = ExtResource("6_x6hv1")
+text = "Pokračovat"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 552.0
+offset_top = 400.0
+offset_right = -72.0
+offset_bottom = -128.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Testovací text. Testovací text. Testovací text. Testovací text. Testovací text. "
+label_settings = SubResource("LabelSettings_nkmn1")
+autowrap_mode = 2

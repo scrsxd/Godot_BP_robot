@@ -1,0 +1,83 @@
+[gd_scene load_steps=5 format=3 uid="uid://cd4nrndaj1liu"]
+
+[ext_resource type="Texture2D" uid="uid://bx6kgnpy443ug" path="res://Shapes/Kuzel.png" id="2_22j0e"]
+[ext_resource type="Texture2D" uid="uid://cjivcxsnpcmi1" path="res://Shapes/Rectangle_Thin.png" id="3_6ywjg"]
+[ext_resource type="Texture2D" uid="uid://c0jds7plmlmf4" path="res://Shapes/Half_Circle.png" id="4_6bpt7"]
+[ext_resource type="Texture2D" uid="uid://chm2gcsvvrc6y" path="res://Shapes/Rectangle_Vert.png" id="4_xcagl"]
+
+[node name="JetReference" type="Control"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 200.0
+offset_bottom = 200.0
+pivot_offset = Vector2(100, 100)
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="JetVisuals" type="Node2D" parent="."]
+scale = Vector2(2, 2)
+
+[node name="Kuzel" type="TextureRect" parent="JetVisuals"]
+modulate = Color(0, 0, 0, 1)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 39.0
+offset_top = 40.63
+offset_right = 61.0
+offset_bottom = 96.63
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_22j0e")
+expand_mode = 1
+
+[node name="RectangleThin" type="TextureRect" parent="JetVisuals"]
+modulate = Color(0.388235, 0.388235, 0.388235, 1)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 35.0
+offset_top = 33.985
+offset_right = 65.0
+offset_bottom = 113.985
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_6ywjg")
+expand_mode = 1
+
+[node name="RectangleVert" type="TextureRect" parent="JetVisuals"]
+modulate = Color(0, 0.466667, 0.929412, 1)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 26.5
+offset_top = 3.105
+offset_right = 73.5
+offset_bottom = 67.105
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_xcagl")
+expand_mode = 1
+
+[node name="HalfCircle" type="TextureRect" parent="JetVisuals"]
+modulate = Color(0, 0.388235, 0.878431, 1)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 10.0
+offset_top = 30.885
+offset_right = 90.0
+offset_bottom = 110.885
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_6bpt7")
+expand_mode = 1

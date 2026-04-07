@@ -1,0 +1,56 @@
+[gd_scene load_steps=13 format=3 uid="uid://bljj6v2v2qt8h"]
+
+[ext_resource type="PackedScene" uid="uid://dm5hihv34irbs" path="res://levels_table/table_level.tscn" id="1_axrll"]
+[ext_resource type="PackedScene" uid="uid://dmlokuakpv01" path="res://levels_table/table_level_2/antenna_reference.tscn" id="2_aax3d"]
+[ext_resource type="PackedScene" uid="uid://bucu2a1p1kvus" path="res://Scenes/walking_scene2.tscn" id="2_gxfdq"]
+[ext_resource type="PackedScene" uid="uid://c7i3rsaicjb2n" path="res://levels_table/table_level_2/antenna_top/antenna_top_correct.tscn" id="2_m03lr"]
+[ext_resource type="PackedScene" uid="uid://dtbm8nrpgmvee" path="res://levels_table/table_level_2/antenna_top/antenna_top_fake_1.tscn" id="3_i1p0d"]
+[ext_resource type="PackedScene" uid="uid://ceohqo08c6fg0" path="res://levels_table/table_level_2/antenna_top/antenna_top_fake_2.tscn" id="4_i1jwg"]
+[ext_resource type="PackedScene" uid="uid://bqkoawm4pj0in" path="res://levels_table/table_level_2/antenna_top/antenna_top_fake_3.tscn" id="5_7r4vb"]
+[ext_resource type="PackedScene" uid="uid://b3yb56pw7q8cd" path="res://levels_table/table_level_2/antenna_left/antenna_left_correct.tscn" id="6_qkud2"]
+[ext_resource type="PackedScene" uid="uid://duyc46u6iiiwp" path="res://levels_table/table_level_2/antenna_left/antenna_left_fake_1.tscn" id="7_wx63e"]
+[ext_resource type="PackedScene" uid="uid://b71qg7x3rb068" path="res://levels_table/table_level_2/antenna_left/antenna_left_fake_2.tscn" id="8_113u3"]
+[ext_resource type="PackedScene" uid="uid://bj12ens8dwr0l" path="res://levels_table/table_level_2/antenna_left/antenna_left_fake_3.tscn" id="9_2r04h"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_bw3k4"]
+line_spacing = -5.0
+font_size = 19
+
+[node name="TableLevelTemplate" instance=ExtResource("1_axrll")]
+intro_title = "Najdi anténu"
+intro_desc = "Tryska byla úspěšně připojena do lodi a radar začal ukazovat další součástku - anténu. Robot si není jistý, jak mají stíny vypadat a proto byly některé náhodně otočeny do stran (o 90°). Vyber správné políčko, kde se anténa nachází."
+win_button_text = "Pokračovat"
+allow_row_swap = true
+allow_rotation_90 = true
+next_scene = ExtResource("2_gxfdq")
+correct_top = ExtResource("2_m03lr")
+fake_tops = Array[PackedScene]([ExtResource("3_i1p0d"), ExtResource("4_i1jwg"), ExtResource("5_7r4vb")])
+correct_left = ExtResource("6_qkud2")
+fake_lefts = Array[PackedScene]([ExtResource("7_wx63e"), ExtResource("8_113u3"), ExtResource("9_2r04h")])
+
+[node name="GoalImageSlot" parent="MarginContainer/HBoxContainer" index="1"]
+size_flags_horizontal = 6
+
+[node name="Control" parent="MarginContainer/HBoxContainer/GoalImageSlot" index="0" instance=ExtResource("2_aax3d")]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Label" parent="MarginContainer/HBoxContainer/GoalImageSlot" index="1"]
+text = "Součástka: anténa"
+
+[node name="NinePatchRect9" parent="." index="9"]
+anchor_top = 0.55
+offset_top = -12.0
+offset_bottom = 6.0
+
+[node name="Label" parent="NinePatchRect9/MarginContainer" index="0"]
+text = "Cíl:
+Vybrat políčko, kde se překrývají 2 správné stíny.
+
+Pozor: některé stíny se otočily o 90°
+
+Ovládání:
+Myš: výběr políčka"
+label_settings = SubResource("LabelSettings_bw3k4")

@@ -1,0 +1,58 @@
+[gd_scene load_steps=3 format=3 uid="uid://q2exjgug2yq1"]
+
+[ext_resource type="Texture2D" uid="uid://bx6kgnpy443ug" path="res://Shapes/Kuzel.png" id="1_s12t1"]
+[ext_resource type="Texture2D" uid="uid://chm2gcsvvrc6y" path="res://Shapes/Rectangle_Vert.png" id="4_cxm7f"]
+
+[node name="JetReference" type="Control"]
+modulate = Color(0, 0, 0, 1)
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 100.0
+offset_bottom = 100.0
+pivot_offset = Vector2(50, 50)
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="Rotator" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 100.0
+offset_bottom = 100.0
+pivot_offset = Vector2(50, 50)
+
+[node name="Kuzel" type="TextureRect" parent="Rotator"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -10.0
+offset_top = 5.0
+offset_right = 10.0
+offset_bottom = 47.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -3.14159
+pivot_offset = Vector2(10, 21)
+texture = ExtResource("1_s12t1")
+expand_mode = 1
+
+[node name="RectangleVert" type="TextureRect" parent="Rotator"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -23.5
+offset_top = -47.0
+offset_right = 23.5
+offset_bottom = 17.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_cxm7f")
+expand_mode = 1
