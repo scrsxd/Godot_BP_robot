@@ -1,0 +1,126 @@
+[gd_scene load_steps=10 format=3 uid="uid://dpre86e6xpqem"]
+
+[ext_resource type="PackedScene" uid="uid://cd4nrndaj1liu" path="res://levels_table/table_level_1/jet_reference.tscn" id="1_1f4c0"]
+[ext_resource type="Script" path="res://progress_screen.gd" id="1_daptj"]
+[ext_resource type="Texture2D" uid="uid://bwtn8hocgoid0" path="res://panel_grey_bolts_blue.png" id="1_nmhdd"]
+[ext_resource type="PackedScene" uid="uid://dmlokuakpv01" path="res://levels_table/table_level_2/antenna_reference.tscn" id="2_mbuln"]
+[ext_resource type="Texture2D" uid="uid://cgqbtof8cx8cd" path="res://panel_grey_bolts.png" id="2_nrhkp"]
+[ext_resource type="PackedScene" uid="uid://b4wsdoxjcdd0w" path="res://levels_table/table_level_3/engine_reference.tscn" id="3_qkfdo"]
+[ext_resource type="StyleBox" uid="uid://7u6sm25uko3q" path="res://Scenes/black_button.tres" id="7_s6boa"]
+[ext_resource type="StyleBox" uid="uid://d1bv8m12tsodj" path="res://Scenes/white_button.tres" id="8_xm588"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_itte5"]
+font_size = 65
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
+
+[node name="ProgressScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_daptj")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0.196078, 0.560784, 0.490196)
+
+[node name="NinePatchRect2" type="NinePatchRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 176.0
+offset_top = 40.0
+offset_right = -176.0
+offset_bottom = -432.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_nmhdd")
+patch_margin_left = 30
+patch_margin_top = 30
+patch_margin_right = 30
+patch_margin_bottom = 30
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 192.0
+offset_top = 56.0
+offset_right = -192.0
+offset_bottom = 192.0
+grow_horizontal = 2
+text = "Stav opravy K.4.P.R.a"
+label_settings = SubResource("LabelSettings_itte5")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 128.0
+offset_top = 264.0
+offset_right = -128.0
+offset_bottom = -88.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_nrhkp")
+patch_margin_left = 30
+patch_margin_top = 30
+patch_margin_right = 30
+patch_margin_bottom = 30
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 168.0
+offset_top = 308.0
+offset_right = 984.0
+offset_bottom = 508.0
+theme_override_constants/separation = 100
+
+[node name="JetReference" parent="HBoxContainer" instance=ExtResource("1_1f4c0")]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+size_flags_horizontal = 1
+
+[node name="Control" parent="HBoxContainer" instance=ExtResource("2_mbuln")]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+
+[node name="EngineReference" parent="HBoxContainer" instance=ExtResource("3_qkfdo")]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+
+[node name="NextButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 344.0
+offset_top = -112.0
+offset_right = 515.0
+offset_bottom = -54.0
+grow_horizontal = 2
+grow_vertical = 0
+focus_mode = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = ExtResource("7_s6boa")
+theme_override_styles/hover = ExtResource("8_xm588")
+theme_override_styles/pressed = ExtResource("7_s6boa")
+text = "Pokračovat"
